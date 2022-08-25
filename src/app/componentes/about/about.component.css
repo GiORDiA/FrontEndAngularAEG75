@@ -1,0 +1,327 @@
+/* _______________________________________________________________________*/
+/* ================::::::::::COMPONENT about ::::::::::==================*/
+/* :::::Para Dispositivos MOBILES:::: */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap'); /* url de la fuente de style Google Font para esta sección*/
+
+/* Sección Acerca de, About */
+.about {
+  text-align: center; /* elemtos hijos centrados con respecto al viewport */
+}
+
+/* Div padre About + BannerFOTOPerfil + info profesional sobre mí + descarga cv */
+.about-img-section {
+  background-color: #1e78ff;
+  border-radius: 42px; /* redondeo los bordes-puntas del botón */
+  box-shadow: 0 4px 5px var(--navbar-shallow-color);
+}
+
+/* _______________________________________________________________________*/
+
+/* Imagen del Banner */
+.banner-img {
+  width: 100%; /* banner que sea el 100% de mi viewport */
+  padding: auto;
+  margin-top: 20px;
+  border-radius: 10px; /* redondeo las puntas del botón */
+  box-shadow: 0 4px 5px var(--navbar-shallow-color);
+  border: 1px solid var(--navbar-shallow-color);
+  /*transform: scaleX(-1); */
+}
+
+/* _______________________________________________________________________*/
+
+/* Div hijo about-img-section información */
+.about-info {
+  margin-bottom: 25px;
+}
+
+/* Imagen Foto perfil */
+.about-img {
+  width: 65%;  /* foto de perfil que sea el 75% de mi viewport */
+  max-width: 300px; /* que la imagen no se amplie más alla de los 350 pixeles */
+  border-radius: 50%;
+  margin-top: -120px;
+  transform: translateY(10px);
+  box-shadow: 0 15px 35px var(--navbar-shallow-color);
+  border: 1px solid var(--navbar-shallow-color);
+  transition: 0.8s;
+  animation-name: mover;
+  animation-iteration-count: infinite;
+}
+
+.about-img:hover {
+  transform: translateY(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: 0.8s;
+  background-color: transparent;
+  animation-name: mover;
+  animation-iteration-count: infinite;
+}
+
+/* h1 Titulo Nombre*/
+.about-name {
+  font-size: 50px !important;
+  font-weight: bold; /* que este resaltado en negrita */
+  margin: 0; /* por defecto los navegadores agregan margenes, asi lo anulo */
+  margin-top: 15px;
+  color: var(--primary-color);
+  font-family: 'Noto Sans', sans-serif; /* si esta fuente no lo encuentra por defecto toma el sans-serif del sistema operativo */
+}
+
+/* h2 Titulo Full Stack Dev Jr*/
+.about-specialty {
+  font-size: 25px !important;
+  font-weight: bold; /* que este resaltado en negrita */
+  margin: 0; /* por defecto los navegadores agregan margenes, asi lo anulo */
+  color: var(--primary-color);
+  font-family: 'Noto Sans', sans-serif; /* si esta fuente no lo encuentra por defecto toma el sans-serif del sistema operativo */
+  margin-bottom: 15px; /* margen inferior separado del parrafo */
+}
+
+/* Párrafo detalles breves profesional hoby lugar etc */
+.about-details {
+  font-size: 18px;
+  font-weight: 500; /* que tenga una fuerza medium, no es tan fuerte como es bold */
+  line-height: 1.3; /* alto de linea: para que tenga un poco más de espaciado entre lineas */
+  max-width: 450px; /* ancho maximo para que no tenga más de 6, 7 palabras por lineas */
+  margin: 0 auto; /* para centrar con el text-align ya no lo toma, entonces le doy unos magenes: arriba-abajo 0 y de izquierda-derecha auto, se acomoda auto centrado */
+  margin-bottom: 12px; /* margen inferior separado del boton Descarga cv */
+}
+
+/* Botón Descarga cv */
+.about-btn {
+  background-color: var(--navbar-shallow-color);
+  color: var(--text-color-inverse);
+  border: 1.5px solid var(--theme-color);
+  font-size: 20px; /* Tamaño de fuente */
+  padding: 0.5em 1em; /* separo de su contenedor en unidad de medida em = (es relativa a la medida de la fuente declarada del elemento, ej: 0.5em = a la mitad de píxeles de font-size y 1em = es igual cantidad de píxeles declarada en el font-size) siempre estara sujeta a los pixeles del font-size */
+  border-radius: 42px; /* redondeo las puntas del botón */
+}
+
+.about-btn:hover {
+  font-size: 10px solid; /* Tamaño de fuente */
+  filter: brightness(100%); /* al hacer hover sobre el botón que tenga más brillo */
+  /*color: cadetblue;*/
+  cursor: pointer; /* cabie el puntero para seleccionar */
+  border: 3.5px solid var(--theme-color);
+}
+
+/* _______________________________________________________________________*/
+
+/* h2 Titulo Acerca de */
+.title-acerca-de {
+  font-size: 35px !important;
+  font-weight: bold; /* que este resaltado en negrita */
+  margin: 0; /* por defecto los navegadores agregan margenes, asi lo anulo */
+  color: var(--primary-color);
+  font-family: 'Noto Sans', sans-serif; /* si esta fuente no lo encuentra por defecto toma el sans-serif del sistema operativo */
+  margin-top: 5px; /* Separación con el boton de descarga cv */
+}
+
+/* Párrafo Información Acerca de */
+.acerca-de-details {
+  font-size: 18px;
+  font-weight: 500; /* que tenga una fuerza medium, no es tan fuerte como es bold */
+  line-height: 1.3; /* alto de linea: para que tenga un poco más de espaciado entre lineas */
+  max-width: 450px; /* ancho maximo para que no tenga más de 6, 7 palabras por lineas */
+  margin: 0 auto; /* para centrar con el text-align ya no lo toma, entonces le doy unos magenes: arriba-abajo 0 y de izquierda-derecha auto, se acomoda auto centrado */
+  margin-top: 10px; /* margen superior separado del h1 titulo */
+  margin-bottom: 20px; /* margen inferior separado del siguiente elemento */
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  margin-bottom: 50px; /* margen inferior separado del siguiente elemento */
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: orangered;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #fdfdfd;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fee800;
+}
+
+/* _______________________________________________________________________*/
+/* ==========================RESPONSIVE=============================*/
+
+/* Style: :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+@media (min-width: 950px) {
+  /* Sección Acerca de, About */
+/* Div padre About + BannerFOTOPerfil + info profesional sobre mí + descarga cv */
+  .about-img-section {
+    background-color: #0d6efd;
+    text-align: left; /* elemtos hijos a la izquierda con respecto al viewport */
+    justify-content: space-between;
+    max-width: 980px; /* ancho de pantalla máximo entre separación de los elementos */
+    margin: 0 auto; /* centramos los elementos */
+  }
+
+/* _______________________________________________________________________*/
+
+/* Div hijo de about-img-section del Banner */
+  .banner-img-section {
+    display: flex; /* los elementos se colocan al lado en bloque fila */
+  /*position: relative;*/
+    margin-top: -5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+/* Imagen del Banner */
+  .banner-img {
+    max-width: 1300px;
+    left: 0; /* izquierda */
+    margin: 0; /* margenes por defecto los anulamos */
+    box-shadow: 0 4px 5px var(--text-color);
+  }
+
+/* _______________________________________________________________________*/
+
+
+/* Div hijo about-img-section información */
+  .about-info {
+    text-align: left;
+    display: flex;
+    justify-content: space-between; /* espacio en el medio de los elementos separados en bloques en cada esquina */
+    max-width:980px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+/* Div hijo de about-info */
+  .about-perfil-img {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+/* Imagen Foto perfil */
+  .about-img {
+    width: 55%;  /* foto de perfil que sea el 75% de mi viewport */
+    max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
+    /*transform: scaleX(-1);*/
+    margin-top: -150px;
+  }
+
+/* h1 Titulo Nombre*/
+  .about-name {
+    font-size: 60px !important;
+    margin-top: 10px;
+  }
+
+/* h2 Titulo Full Stack Dev Jr*/
+  .about-specialty {
+    font-size: 35px !important;
+  }
+
+/* Párrafo detalles Acerca de */
+  .about-details {
+    margin-bottom: 15px;
+  }
+
+/* Botón Descarga cv */
+  .about-btn {
+    font-size: 28px; /* Tamaño de fuente */
+    cursor: pointer; /* cabie el puntero para seleccionar */
+  }
+
+  .about-btn:hover {
+    font-size: 15px solid;
+    filter: brightness(120%); /* al hacer hover sobre el botón que tenga más brillo */
+  }
+
+/* _______________________________________________________________________*/
+
+/* Div hijo de about-info Acerca de*/
+  .acerca-de {
+    margin-top: -50px;
+  }
+
+/* h2 Titulo Acerca de */
+  .title-acerca-de {
+    font-size: 50px !important;
+    margin-top: 25px; /* Separación con el boton de descarga cv */
+  }
+
+/* Párrafo Información Acerca de */
+  .acerca-de-details {
+    margin: 30px 0; /* para centrar con el text-align ya no lo toma, entonces le doy unos magenes: arriba-abajo 20 y de izquierda-derecha auto, se acomoda auto centrado */
+  }
+}

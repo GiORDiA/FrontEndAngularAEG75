@@ -1,0 +1,137 @@
+/* _______________________________________________________________________*/
+/* ================::::::::::COMPONENT projects ::::::::::==================*/
+/* :::::Para Dispositivos MOBILES:::: */
+/* section general de Experiencias */
+.projects {
+  display: flex;
+  flex-direction: column; /* para integrar las imagenes ola en columna*/
+}
+
+/* section del cuerpo de Educación */
+.projects-body {
+  max-width: 980px; /* que tenga un ancho máximo a 980px */
+  margin: 0 auto; /* para centrar el margen de los elementos ya que fijamos en 10px dentro de los elementos skills-skill y por defecto lo alinea a la izquierda */
+  background-color: #0066FF; /*var(--navbar-shallow-color); color de fondo usando una variable que esta a la raiz del documento .:root */
+  color: var(--text-color-inverse); /* idem anterior pero en el color del texto */
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* lo anulamos ya que por defecto al ser ul lista desordenada agrega un espacio para el punto al lado del elemento */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* que tenga una sombra atras de 0 en el desplazamiento en el eje x, 4px hacia abajo en el eje y, 10px de blur/difuminado de la sombra, de color negro con un 25% de transpariencia */
+  border-radius: 42px; /* redondeo los bordes-puntas del botón */
+  border: 0.25px solid var(--navbar-shallow-color);
+}
+
+.projects-body:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  cursor: pointer none;
+  transition: 0.8s;
+  border: 0.25px solid #06ccff;
+}
+
+.projects-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 25px;
+  cursor: pointer none;
+  position: relative;
+  padding: 10px 20px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+}
+
+.projects-title::after, .projects-title::before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid #06ccff;
+  transition: all 1s;
+}
+
+.projects-title::after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid #06ccff;
+  border-left: 5px solid #06ccff;
+}
+
+.projects-title::before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid #06ccff;
+  border-right: 5px solid #06ccff;
+}
+
+.projects-title:hover {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.projects-title:hover::before, .projects-title:hover::after {
+  width:100%;
+  height:100%;
+}
+
+/* _______________________________________________________________________*/
+/* ==========================RESPONSIVE=============================*/
+
+/* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+@media (min-width: 950px) {
+
+  .projects-title {
+    font-size: 50px;
+    margin: 35px;
+  }
+
+  .empty {
+  display: flex;
+  width: 100%;  /* foto de perfil que sea el 75% de mi viewport */
+  max-width: 350px; /* que la imagen no se amplie más alla de los 300 pixeles */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  margin-top: -50px;
+  margin-bottom: -10px;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: auto 2px auto;
+    gap: 20px 70px;
+    padding: 70px;
+    justify-content: center;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .line {
+    background-color: var(--text-color-inverse);
+    position: relative;
+  }
+
+  .line::before,
+  .line::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--text-color-inverse);
+    border-radius: 50%;
+
+    position: absolute;
+    top: -20px;
+    left: -9px;
+  }
+
+  .line::after {
+    top: 100%;
+    z-index: 1;
+  }
+}

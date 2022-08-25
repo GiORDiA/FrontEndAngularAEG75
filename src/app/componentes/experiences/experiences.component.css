@@ -1,0 +1,200 @@
+/* _______________________________________________________________________*/
+/* ================::::::::::COMPONENT experiences ::::::::::==================*/
+/* :::::Para Dispositivos MOBILES:::: */
+/* section general de Experiencias */
+.experiences {
+  display: flex;
+  flex-direction: column; /* para integrar las imagenes ola en columna*/
+}
+
+/* section del cuerpo de experiencias */
+.experiences-body {
+  max-width: 980px; /* que tenga un ancho máximo a 980px */
+  margin: 0 auto; /* para centrar el margen de los elementos ya que fijamos en 10px dentro de los elementos skills-skill y por defecto lo alinea a la izquierda */
+  background-color: var(--bd-purple); /* --navbar-shallow-color color de fondo usando una variable que esta a la raiz del documento .:root */
+  color: var(--text-color-inverse); /* idem anterior pero en el color del texto */
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* lo anulamos ya que por defecto al ser ul lista desordenada agrega un espacio para el punto al lado del elemento */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* que tenga una sombra atras de 0 en el desplazamiento en el eje x, 4px hacia abajo en el eje y, 10px de blur/difuminado de la sombra, de color negro con un 25% de transpariencia */
+  border-radius: 42px; /* redondeo los bordes-puntas del botón */
+  border: 0.15px solid #06ccff;
+}
+
+.experiences-body:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  cursor: pointer none;
+  transition: 0.8s;
+}
+
+.experiences-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 25px;
+  cursor: pointer none;
+  position: relative;
+  padding: 10px 20px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+}
+
+.experiences-title::after, .experiences-title::before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid #06ccff;
+  transition: all 1s;
+}
+
+.experiences-title::after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid #06ccff;
+  border-left: 5px solid #06ccff;
+}
+
+.experiences-title::before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid #06ccff;
+  border-right: 5px solid #06ccff;
+}
+
+.experiences-title:hover {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.experiences-title:hover::before, .experiences-title:hover::after {
+  width:100%;
+  height:100%;
+}
+
+/* al rededor de cada experiencia*/
+.experience {
+  padding: 25px; /* añadimos espacios */
+  max-width: 500px; /* para que el texto al ampliar el viewport no se amplie a lo ancho le pongo un máximo de 6 -7 palabras. */
+  margin: 0 auto; /* el contenido queda centrado modo tipo tablet-intermedio. */
+}
+
+.experience:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(28, 27, 27, 0.5);
+  border-radius: 42px; /* redondeo los bordes-puntas del botón */
+  cursor: pointer none;
+  transition: 0.8s all;
+  background-color: transparent;
+}
+
+.experience-date {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.experience-company {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.experience-position {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.experience-description {
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* _______________________________________________________________________*/
+/* ==========================RESPONSIVE=============================*/
+
+/* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+@media (min-width: 950px) {
+
+  .experiences-title {
+    font-size: 50px;
+    margin: 35px;
+  }
+
+  .experiences-grid {
+    display: grid;
+    grid-template-columns: auto 2px auto;
+    gap: 20px 70px;
+    padding: 70px;
+    justify-content: center;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .line {
+    background-color: var(--text-color-inverse);
+    position: relative;
+  }
+
+  .line::before,
+  .line::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--text-color-inverse);
+    border-radius: 50%;
+
+    position: absolute;
+    top: -20px;
+    left: -9px;
+  }
+
+  .line::after {
+    top: 100%;
+    z-index: 1;
+  }
+
+  .experience {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(28, 27, 27, 0.5);
+    border-radius: 42px; /* redondeo los bordes-puntas del botón */
+    transition: 0.8s;
+    background-color: transparent; /*#06ccff;*/
+    border: 1px solid #0066FF;
+  }
+
+  .experience:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+    background-color: #0066FF;
+    border: 1px solid #06ccff;
+  }
+
+  .experience-date {
+    font-size: 40px;
+  }
+
+  .experience-company {
+    font-size: 25px;
+  }
+
+  .experience-position {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .experience-description {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .experience_left {
+    text-align: right;
+  }
+}

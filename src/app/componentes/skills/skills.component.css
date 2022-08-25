@@ -1,0 +1,368 @@
+/* _______________________________________________________________________*/
+/* ================::::::::::COMPONENT skills ::::::::::==================*/
+/* :::::Para Dispositivos MOBILES:::: */
+.skills {
+  max-width: 980px; /* que tenga un ancho máximo a 980px */
+  margin: 0 auto; /* para centrar el margen de los elementos ya que fijamos en 10px dentro de los elementos skills-skill y por defecto lo alinea a la izquierda */
+  justify-content: center;
+  align-items: center;
+}
+
+/* _______________________________________________________________________*/
+/* Style: para dispositivos mobil que se aplica desde 0 hasta 950 píxeles */
+.skills-title {
+  font-size: 30px !important; /* tamaño de fuente */
+  font-weight: bold; /* que este en negrita*/
+  text-transform: uppercase; /* que este en mayuscula */
+  text-align: center; /* que este alinedo al centro */
+  margin-bottom: 15px;
+  cursor: pointer none;
+  position: relative;
+  padding: 10px 20px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+  color:#2a2a2a;
+}
+
+.skills-title::after, .skills-title::before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid #06ccff;
+  transition: all 1s;
+}
+
+.skills-title::after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid #06ccff;
+  border-left: 5px solid #06ccff;
+}
+
+.skills-title::before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid #06ccff;
+  border-right: 5px solid #06ccff;
+}
+
+.skills-title:hover {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.skills-title:hover::before, .skills-title:hover::after {
+  width:100%;
+  height:100%;
+}
+
+.skills-list {
+  list-style: none; /* para quitarle los puntos que pone por defecto en la lista*/
+  padding: 0; /* lo anulamos ya que por defecto al ser ul lista desordenada agrega un espacio para el punto al lado del elemento */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* que tenga una sombra atras de 0 en el desplazamiento en el eje x, 4px hacia abajo en el eje y, 10px de blur/difuminado de la sombra, de color negro con un 25% de transpariencia */
+  border-radius: 42px; /* redondeo los bordes-puntas del botón */
+
+  display: flex; /* posicionamos los elementos uno al lado del otro */
+  flex-wrap: wrap; /* anulo el scroll horizontal para que los elementos esten uno debajo del otro, que por defecto esta en nowrap*/
+  justify-content: space-around; /* para que el contenido este centrado el eje horizontal */
+  gap: 40px; /* circle*/
+  background-color: #06ccff;
+  border: 1px solid #0215fd;
+}
+
+.skills-list:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  cursor: pointer none;
+  transition: 0.8s;
+}
+
+.skills-skill {
+  font-size: 20px; /* tamaño de fuente */
+  font-weight: 500; /* que este en 500 peso o grueso de la letra */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* que tenga una sombra atras de 0 en el desplazamiento en el eje x, 4px hacia abajo en el eje y, 10px de blur/difuminado de la sombra, de color negro con un 25% de transpariencia */
+  border-radius: 42px; /* redondeo los bordes-puntas del botón */
+  padding: 0.7em 0.5em; /* espaciado al rededor del elemento: 50% arriba y abajo y 70% a los costados */
+  margin: 10px; /* margen para que esten separados los elementos uno del otro */
+  background: #2a2a2a;
+  max-width: 430px;
+  min-width: 10px;
+}
+
+.skills-skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.skill-img {
+  display: flex;
+  width: 60%;  /* foto de perfil que sea el 75% de mi viewport */
+  height: auto;
+  min-height: 15vh;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1px;
+  /*background: #222;
+  /*border-radius: 50%;*/
+  /*margin-top: -100px;*/
+}
+
+/* circle */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px auto;
+}
+
+.container .card {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #2a2a2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif,
+}
+
+.container .card .percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.card:hover .percent .number h2{
+  color: rgb(249, 251, 251);
+  font-size: 53px;
+}
+
+.container .card .percent svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+  /*background: #f00;*/
+}
+
+.container .card .percent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 2;
+  stroke: #191919;
+  transform: translate(5px,5px);
+}
+
+.container .card .percent svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 10;
+  transform: rotate(calc(3.6deg * var(--num)));
+  /* 360deg / 100 = 3.6 */
+  animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+
+.dot::before {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--clr);
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+
+.number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.number h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0008f5;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.number h2 span {
+  font-weight: 300;
+  color: #929292;
+  font-size: 0.5em;
+}
+
+.number h3 {
+  font-weight: 300;
+  font-size: 0.60em;
+  letter-spacing: 2px;
+  margin-top: -8px;
+  text-transform: uppercase;
+  color: rgba(255,255,25,0.75);
+}
+
+
+.skill-img-html {
+  max-width: 40%;
+  max-height: 40%;
+ /*width: 60%;  /* foto de perfil que sea el 60% de mi viewport */
+}
+
+.skill-img-css {
+  max-width: 28%;
+  max-height: 28%;
+  /*width: 45%;  /* foto de perfil que sea el 50% de mi viewport */
+}
+
+.skill-img-js {
+  max-width: 62%;
+  max-height: 62%;
+  /*width: 100%;  /* foto de perfil que sea el 60% de mi viewport */
+}
+
+.skill-img-angular {
+  max-width: 80%;
+  max-height: 80%;
+  /*width: 100%;  /* foto de perfil que sea el 60% de mi viewport */
+}
+
+.skill-img-sql {
+  max-width: 80%;
+  max-height: 80%;
+  /*width: 100%;  /* foto de perfil que sea el 60% de mi viewport */
+}
+
+.skill-img-ruby {
+  max-width: 48%;
+  max-height: 48%;
+}
+
+.skill-img-git {
+  max-width: 35%;
+  max-height: 35%;
+}
+
+.skill-img-github {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.skill-img-flexboxgrid {
+  max-width: 65%;
+  max-height: 65%;
+  border-radius: 5%;
+}
+
+.skill-img-bootstrap {
+  max-width: 85%;
+  max-height: 85%;
+}
+
+.skill-img-figma {
+  max-width: 25%;
+  max-height: 25%;
+}
+
+.skill-img-ofimatica {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.skill-img-computerized {
+  max-width: 40%;
+  max-height: 40%;
+  border-radius: 5%;
+}
+
+/* _______________________________________________________________________*/
+/* ==========================RESPONSIVE=============================*/
+
+/* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+@media(min-width: 950px) {
+
+  /* que esta Section Skills tenga */
+  .section-skills {
+    padding: 19px;
+    margin: 0;
+    box-sizing: border-box;
+    background: transparent, /*#e5e5e5; /*rgb(249, 251, 251);*/
+  }
+
+  .skills-title {
+    font-size: 50px !important; /* tamaño de fuente */
+    max-width: 980px; /* que tenga un ancho máximo a 980px */
+  }
+
+  .skill-img-git {
+    max-width: 40%;
+    max-height: 40%;
+  }
+
+  .skill-img-github {
+    max-width: 52%;
+    max-height: 52%;
+  }
+}
