@@ -64,11 +64,11 @@
 }
 
 .btn.btn-primary {
-  background: #013b9f;
+  background-color: var(--bs-blue); /*#013b9f; */
   padding: 3px 10px;
   box-shadow: 0 2px 4px var(--theme-color);
   border-radius: 10px;
-  border: 2px solid var(--bd-purple);
+  border: 2px solid var(--bs-cyan);
 }
 
 /* Menu */
