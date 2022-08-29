@@ -15,7 +15,8 @@ import { WaveDComponent } from './componentes/wave-d/wave-d.component';
 import { ProjectsComponent } from './componentes/projects/projects.component';
 import { WaveEComponent } from './componentes/wave-e/wave-e.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-
+import { PorfolioService } from './servicios/porfolio.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +35,10 @@ import { FooterComponent } from './componentes/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PorfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
