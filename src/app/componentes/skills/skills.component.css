@@ -1,3 +1,5 @@
+/* circle */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
 /* _______________________________________________________________________*/
 /* ================::::::::::COMPONENT skills ::::::::::==================*/
 /* :::::Para Dispositivos MOBILES:::: */
@@ -100,7 +102,7 @@
 
 .skill-img {
   display: flex;
-  width: 60%;  /* foto de perfil que sea el 75% de mi viewport */
+  width: 60%;
   height: auto;
   min-height: 15vh;
   justify-content: space-evenly;
@@ -114,8 +116,7 @@
   /*margin-top: -100px;*/
 }
 
-/* circle */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+/* ::::: CIRCLE :::: */
 
 .container {
   position: relative;

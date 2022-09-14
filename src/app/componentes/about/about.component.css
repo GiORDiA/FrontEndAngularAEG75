@@ -90,20 +90,34 @@
 
 /* Botón Descarga cv */
 .about-btn {
-  background-color: var(--navbar-shallow-color);
-  color: var(--text-color-inverse);
-  border: 1.5px solid var(--theme-color);
+  border: none;
   font-size: 20px; /* Tamaño de fuente */
   padding: 0.5em 1em; /* separo de su contenedor en unidad de medida em = (es relativa a la medida de la fuente declarada del elemento, ej: 0.5em = a la mitad de píxeles de font-size y 1em = es igual cantidad de píxeles declarada en el font-size) siempre estara sujeta a los pixeles del font-size */
   border-radius: 42px; /* redondeo las puntas del botón */
+  background: linear-gradient(to right, var(--bs-cyan), var(--theme-color));
+  color: var(--bs-light);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.about-btn:hover {
+.about-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  z-index: -1;
+}
+
+.about-btn:hover::before {
+  background-color: var(--button-hover-color);
   font-size: 10px solid; /* Tamaño de fuente */
   filter: brightness(100%); /* al hacer hover sobre el botón que tenga más brillo */
   /*color: cadetblue;*/
   cursor: pointer; /* cabie el puntero para seleccionar */
-  border: 3.5px solid var(--theme-color);
 }
 
 /* _______________________________________________________________________*/
@@ -156,8 +170,9 @@ button.learn-more .circle {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: orangered;
   border-radius: 1.625rem;
+  background: linear-gradient(to right, var(--bs-cyan), var(--theme-color));
+  color: var(--bs-light);
 }
 
 button.learn-more .circle .icon {
@@ -187,6 +202,7 @@ button.learn-more .circle .icon.arrow::before {
   border-top: 0.125rem solid #fff;
   border-right: 0.125rem solid #fff;
   transform: rotate(45deg);
+  transition: background-color 0.5s ease;
 }
 
 button.learn-more .button-text {
@@ -207,6 +223,7 @@ button.learn-more .button-text {
 
 button:hover .circle {
   width: 100%;
+  background-color: var(--button-hover-color);
 }
 
 button:hover .circle .icon.arrow {
@@ -298,8 +315,7 @@ button:hover .button-text {
 
 /* Botón Descarga cv */
   .about-btn {
-    font-size: 28px; /* Tamaño de fuente */
-    cursor: pointer; /* cabie el puntero para seleccionar */
+    font-size: 25px; /* Tamaño de fuente */
   }
 
   .about-btn:hover {

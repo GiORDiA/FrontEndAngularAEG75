@@ -49,6 +49,25 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-cornflowerblue:#6495ed;
+  --green: hsl(162, 45%, 56%);
+  --lead: hsl(162, 2%, 56%);
+  --blue: hsl(220, 85%, 57%);
+  --theme-color-b: hsl(241, 91%, 42%);
+  --violet: hsl(272, 92%, 32%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-light-gray: hsl(0, 0%, 90%);
+  --text-yellow: hsl(117, 98%, 50%);
+  --body-bg-color: hsl(200, 54%, 12%);
+  --glass-bg-color: hsl(0, 0%, 100%, 0.05);
+  --border-color: hsl(0, 0%, 100%, 0.25);
+  --blur: blur(10px);
+  --button-hover-color: hsl(0, 0%, 0%, 0.3);
+}
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .html {
@@ -61,7 +80,7 @@ img[id] {
 
 /* para todo el body Google Font fuente Montserrat sino sans-serif del navegador */
 
-.body {
+ .body {
   font-family:'Montserrat', sans-serif;
   background-color: var(--bs-gray-400);
   color: var(--text-color);
@@ -144,19 +163,19 @@ a {
   }
 
   .img-central-section {
-  width: 80%;  /* foto de perfil que sea el 75% de mi viewport */
-  max-width: 400px; /* que la imagen no se amplie más alla de los 400 pixeles */
-  padding: 0 0;
-  margin-top: -30px;
-  margin-bottom: -20px;
-  transform: translateY(60px);
+    width: 80%;  /* foto de perfil que sea el 75% de mi viewport */
+    max-width: 400px; /* que la imagen no se amplie más alla de los 400 pixeles */
+    padding: 0 0;
+    margin-top: -30px;
+    margin-bottom: -20px;
+    transform: translateY(60px);
   }
 
   .img-central-section:hover {
-  transform: translateY(-25px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
-  transition: 1s;
-  animation-name: move;
-  animation-iteration-count: infinite;
+    transform: translateY(-25px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    animation-name: move;
+    animation-iteration-count: infinite;
   }
 }

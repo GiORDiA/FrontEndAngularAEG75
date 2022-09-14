@@ -17,6 +17,8 @@ import { WaveEComponent } from './componentes/wave-e/wave-e.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { PorfolioService } from './servicios/porfolio.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './componentes/login/login.component';
+import { PortfoliowebComponent } from './componentes/portfolioweb/portfolioweb.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     WaveDComponent,
     ProjectsComponent,
     WaveEComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    PortfoliowebComponent
   ],
   imports: [
     BrowserModule,
