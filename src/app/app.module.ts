@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
@@ -19,6 +19,8 @@ import { PorfolioService } from './servicios/porfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './componentes/login/login.component';
 import { PortfoliowebComponent } from './componentes/portfolioweb/portfolioweb.component';
+import { interceptorProvider } from './servicios/interceptor-service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,9 +42,11 @@ import { PortfoliowebComponent } from './componentes/portfolioweb/portfolioweb.c
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
-  providers: [PorfolioService],
+  providers: [PorfolioService, interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

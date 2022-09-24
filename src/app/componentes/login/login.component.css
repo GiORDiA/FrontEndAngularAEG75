@@ -1,41 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body {
-  background-color: var(--body-bg-color);
-  color: var(--text-light-gray);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  overflow: hidden;
-}
-
-body::after,
-body::before {
-  content: '';
-  position: fixed;
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  z-index: -1;
-  filter:blur(150px);
-  opacity: 0.5;
-}
-
-body::before {
-  background-color: var(--theme-color-b);
-  left: 0;
-  bottom: 0;
-  transform: translate(-50%);
-}
-
-body::after {
-  background-color: var(--theme-color-b);
-  right: 0;
-  top: 0;
-  transform: translate(50%);
-}
-
 .gradient-text a {
   text-decoration: none;
   font-weight: 500;
@@ -173,13 +137,6 @@ body::after {
 }
 
 @media (max-width: 575px) {
-
-  body::after,
-  body::before {
-    height: 250px;
-    width: 250px;
-    filter: blur(100px);
-  }
 
   .form-content .box {
     padding: 30px;

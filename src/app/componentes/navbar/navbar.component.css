@@ -91,6 +91,14 @@
   background-color: var(--button-hover-color);
 }
 
+.btn-logout {
+  font-size: 15px;
+  background: linear-gradient(to right, var(--text-white), var(--tertiary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Menu */
 .menunav {
   display: flex; /* los elementos al lado en bloque fila */

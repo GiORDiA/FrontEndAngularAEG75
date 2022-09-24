@@ -19,7 +19,8 @@
         </div>
       </div>
       <div class="btn-login">
-        <a class="btn btn-primary" href="/login" role="button">Login</a>
+        <a class="btn btn-primary" href="/login" role="button" *ngIf="!isLogged">Login</a>
+        <button type="button" class="btn btn-primary btn-logout" (click)="onLogOut()" *ngIf="isLogged"><b>Logout</b></button>
       </div>
       <div class="container py-2">
         <div class="form-check form-switch">

@@ -2,15 +2,20 @@
   <div class="form-content">
     <div class="box">
       <h3>Bienvenido</h3>
-      <form action="">
+      <p class="gradient-text text-50 mb-3">¡Por favor, introduce tu usuario y contraseña!</p>
+      <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
         <div class="input-box">
-          <input type="text" placeholder="e-mail or telephone" class="input-control">
+          <input type="text" placeholder="Username" class="input-control" id="nombreUsuario"
+          name="nombreUsuario"
+          [(ngModel)]="nombreUsuario" required/>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="password" class="input-control">
+          <input type="password" placeholder="Password" class="input-control" id="password"
+          name="password"
+          [(ngModel)]="password" required/>
           <div class="checkbox">
             <label>
-              <input type="checkbox" value="remember-me"> Remember me
+              <input type="checkbox" value="remember-me"> Remember logín.
             </label>
           </div>
           <div class="input-link">
@@ -18,6 +23,7 @@
           </div>
         </div>
         <button type="submit" class="btn">Iniciar Sesión</button>
+        <!-- <a href="http://localhost:4200" class="btn">Go back</a> -->
       </form>
       <p>¿No tienes una cuenta? <a href="../login/register.html" class="gradient-text">Crear cuenta</a></p>
       <br>
