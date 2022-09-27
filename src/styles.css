@@ -74,54 +74,19 @@
   scroll-behavior: smooth; /* para lograr que el comportamiento de desplazamiento-scroll sea suave */
 }
 
-body {
-  background-color: var(--body-bg-color);
-  color: var(--text-light-gray);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  overflow: hidden;
-}
-
-body::after,
-body::before {
-  content: '';
-  position: fixed;
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  z-index: -1;
-  filter:blur(150px);
-  opacity: 0.5;
-}
-
-body::before {
-  background-color: var(--theme-color-b);
-  left: 0;
-  bottom: 0;
-  transform: translate(-50%);
-}
-
-body::after {
-  background-color: var(--theme-color-b);
-  right: 0;
-  top: 0;
-  transform: translate(50%);
-}
-
-img[id] {
-  scroll-margin-top: 150px; /* para lograr al hacer scroll que quede visible la sección elejida y no por debajo del menu de navegación - barra de navegacion que es fija */
-}
-
 /* para todo el body Google Font fuente Montserrat sino sans-serif del navegador */
 
- .body {
+.body {
   font-family:'Montserrat', sans-serif;
-  background-color: var(--bs-gray-400);
+  background-color: var(--bs-gray-500);
   color: var(--text-color);
   padding-top: 140px; /* para tener espacio en el top body al estar fijado el navbar (.topheader position fixed) barra de navegación */
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+}
+
+/* Para el Portfolio en general */
+img[id] {
+  scroll-margin-top: 150px; /* para lograr al hacer scroll que quede visible la sección elejida y no por debajo del menu de navegación - barra de navegacion que es fija */
 }
 
 /* reseteo global enlaces: */
@@ -213,15 +178,5 @@ a {
     transition: 1s;
     animation-name: move;
     animation-iteration-count: infinite;
-  }
-}
-
-@media (max-width: 575px){
-
-  body::after,
-  body::before {
-    height: 250px;
-    width: 250px;
-    filter: blur(100px);
   }
 }

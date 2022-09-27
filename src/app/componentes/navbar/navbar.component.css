@@ -192,7 +192,7 @@
 
 @media (max-width: 950px) {
   .topheader {
-    position: none; /*posición fija del Header con respecto del viewport como barra completa no se oculta con el scroll */
+    position: none;
   }
 
   /* Logos */
