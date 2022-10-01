@@ -20,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './componentes/login/login.component';
 import { PortfoliowebComponent } from './componentes/portfolioweb/portfolioweb.component';
 import { interceptorProvider } from './servicios/interceptor-service';
+import { NewExperiencesComponent } from './componentes/experiences/new-experiences.component';
+import { EditExperiencesComponent } from './componentes/experiences/edit-experiences.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { interceptorProvider } from './servicios/interceptor-service';
     WaveEComponent,
     FooterComponent,
     LoginComponent,
-    PortfoliowebComponent
+    PortfoliowebComponent,
+    NewExperiencesComponent,
+    EditExperiencesComponent
   ],
   imports: [
     BrowserModule,

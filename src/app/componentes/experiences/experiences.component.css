@@ -75,6 +75,52 @@
   height:100%;
 }
 
+.img-iconsadd {
+  max-width:22%;
+  max-height:22%;
+  padding: 0 3px;
+}
+
+.img-icons {
+  max-width:18%;
+  max-height:18%;
+  padding: 0 3px;
+}
+
+/* Botón editar */
+.edit-buttons {
+  max-height: 53px;
+  max-width: 174px;
+  border: none;
+  font-size: 10px; /* Tamaño de fuente */
+  padding: 0.5em 1em; /* separo de su contenedor en unidad de medida em = (es relativa a la medida de la fuente declarada del elemento, ej: 0.5em = a la mitad de píxeles de font-size y 1em = es igual cantidad de píxeles declarada en el font-size) siempre estara sujeta a los pixeles del font-size */
+  border-radius: 42px; /* redondeo las puntas del botón */
+  background: linear-gradient(to right, var(--bs-cyan), var(--theme-color));
+  color: var(--bs-light);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.edit-buttons::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  z-index: -1;
+}
+
+.edit-buttons:hover::before {
+  background-color: var(--button-hover-color);
+  font-size: 5px solid; /* Tamaño de fuente */
+  filter: brightness(100%); /* al hacer hover sobre el botón que tenga más brillo */
+  /*color: cadetblue;*/
+  cursor: pointer; /* cabie el puntero para seleccionar */
+}
+
 /* al rededor de cada experiencia*/
 .experience {
   padding: 25px; /* añadimos espacios */
@@ -107,12 +153,19 @@
   font-weight: 500;
   font-size: 18px;
   margin-top: 20px;
+  text-transform: uppercase;
 }
 
-.experience-description {
+.experience-logo {
   font-weight: 400;
   font-size: 15px;
   margin-top: 10px;
+}
+
+.experience_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* _______________________________________________________________________*/
@@ -124,6 +177,16 @@
   .experiences-title {
     font-size: 50px;
     margin: 35px;
+  }
+
+  /* Botón editar */
+  .edit-buttons {
+    font-size: 10px; /* Tamaño de fuente */
+  }
+
+  .edit-buttons:hover {
+    font-size: 5px solid;
+    filter: brightness(120%); /* al hacer hover sobre el botón que tenga más brillo */
   }
 
   .experiences-grid {
@@ -189,12 +252,8 @@
     font-size: 20px;
   }
 
-  .experience-description {
+  .experience-logo {
     font-size: 20px;
     line-height: 1.3;
-  }
-
-  .experience_left {
-    text-align: right;
   }
 }
