@@ -1,0 +1,34 @@
+<div class="container-fluid" *ngIf="educacion">
+  <div class="content-center">
+    <div class="p-5">
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="logoE"><b>Relative Path del logo (opcional)</b></label>
+            <input type="text" class="form-control" id="logoE" name="logoE" placeholder="assets/images/nombreImg.extensión" [(ngModel)]="educacion.logoE">
+            <label for="logoE"><b>Relative Path del logo (opcional)</b></label>
+            <input type="text" class="form-control" id="logoE" name="logoE" placeholder="assets/images/nombreImg.extensión" [(ngModel)]="educacion.logoE">
+            <label for="logoE"><b>Relative Path del logo (opcional)</b></label>
+            <input type="text" class="form-control" id="logoE" name="logoE" placeholder="assets/images/nombreImg.extensión" [(ngModel)]="educacion.logoE">
+          </div>
+          <div class="form-group">
+            <label for="descripcionE"><b>Título o Certificación</b></label>
+            <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="educacion.descripcionE" required>
+          </div>
+          <div class="form-group">
+            <label for="nombreE"><b>Nombre de la Institución</b></label>
+            <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="educacion.nombreE" required>
+          </div>
+          <div class="form-group">
+            <label for="periodoAniosExp"><b>Fecha de ingreso y finalización estudios</b></label>
+            <input type="text" class="form-control" id="periodoAniosE" name="periodoAniosE" placeholder="(AAAA-AAAA)" [(ngModel)]="educacion.periodoAniosE" required>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-success">Modify education</button>
+            <a href="http://localhost:4200" class="btn btn-success">Return</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

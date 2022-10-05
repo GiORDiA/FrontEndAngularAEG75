@@ -13,7 +13,8 @@ export class EditExperiencesComponent implements OnInit {
   expLab: Experiences = null;
 
   constructor(private sExperiences: ExperiencesService, private activatedRouter: ActivatedRoute, private router: Router, private tokenService: TokenService) { }
-  isLogged = false;  
+  isLogged = false;
+
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     if (this.tokenService.getToken()) {
@@ -22,31 +23,25 @@ export class EditExperiencesComponent implements OnInit {
       this.isLogged = false;
     }
     if (this.isLogged) {
-
-    this.sExperiences.detail(id).subscribe(
-      data =>{
+      this.sExperiences.detail(id).subscribe(data => {
         this.expLab = data;
-      }, err =>{
+      }, err => {
         alert("Error al modificar experiencia");
         this.router.navigate(['']);
-      }
-    )
-  } else {
-    alert("No autorizado")
-    this.router.navigate(['']);
+      })
+    } else {
+      alert("No autorizado");
+      this.router.navigate(['']);
+    }
   }
-
-}
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sExperiences.update(id, this.expLab).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err =>{
-        alert("Error al modificar experiencia");
-        this.router.navigate(['']);
-      }
-    )
+    this.sExperiences.update(id, this.expLab).subscribe(data => {
+      this.router.navigate(['']);
+    }, err => {
+      alert("Error al modificar experiencia");
+      this.router.navigate(['']);
+    })
   }
 }

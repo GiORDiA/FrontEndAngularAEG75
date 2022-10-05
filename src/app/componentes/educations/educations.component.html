@@ -3,98 +3,133 @@
 <div class="horizontal-padding vertical-padding"> <!-- microclase global en el espaciado-margen general en el eje horizontal y vertical de esta section -->
   <div class="educations-body"> <!-- clase del cuerpo de educations -->
     <h2 class="educations-title">Educación</h2> <!-- Titulo h2 Educación -->
-    <div class="educations-grid"> <!-- section grilla de educations -->
+    <div class="p-0 mb-3 bd-highlight">
+      <div class="d-flex justify-content-center">
+        <div class="p-1 bd-highlight education-certification">
+          <button type="button" class="edit-buttons" routerLink="/nuevaedu" *ngIf="isLogged"><img class="img-iconsadd" src="assets/img/add-solid.png" alt="New Educations">NEW EDUCATIONS</button>
+        </div>
+      </div>
+    </div>
+    <div class="educations-grid" *ngFor="let Educations of educacion"> <!-- section grilla de educations -->
       <div class="empty">
         <div class="education-logo-img">
-          <img class="education-img-ministerio" src="../assets/img/mindesarrollo.png" alt="Imagen Ministerio de Desarrollo"> <!-- logo Ministerio de Desarrollo -->
-          <img class="education-img-cessi" src="../assets/img/cessicolorC.png" alt="Imagen de la Camara Empresarial del Software"> <!-- logo CESSI -->
-          <img class="education-img-inti" src="../assets/img/inti.png" alt="Imagen Inti"> <!-- logo INTI -->
+          <img class="education-img-cessi" src="{{ Educations.logoE }}" alt="Imagen de la Institución"> <!-- logo de la academia -->
         </div>
       </div>
       <div class="line"></div>
       <div class="education"> <!-- una misma clase general para cada experiencia en particular. -->
-        <div class="education-certification">Full Stack Developer Jr</div> <!-- Título de la Certificación -->
-        <div class="education-institution">MINISTERIO DE DESARROLLO PRODUCTIVO - CÁMARA DE LA INDUSTRIA ARGENTINA DEL SOFTWARE (CESSI) - INSTITUTO NACIONAL DE TECNOLOGÍA INDUSTRIAL (INTI).</div> <!-- nombre de la Institución -->
-        <div class="education-date">Actualmente cursando</div> <!-- fecha de ingreso y finalización -->
+        <div class="education-certification">{{ Educations.descripcionE }}</div> <!-- Título o Certificación -->
+        <div class="education-institution">{{ Educations.nombreE }}</div> <!-- nombre de la Institución -->
+        <div class="education-date">{{ Educations.periodoAniosE }}</div> <!-- fecha de ingreso y finalización -->
         <div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
       </div>
-      <div class="education education_left"> <!-- una misma clase general para cada experiencia en particular. -->
-        <div class="education-certification">Programador</div> <!-- Título de la Certificación -->
-        <div class="education-institution">MINISTERIO DE DESARROLLO PRODUCTIVO DE LA NACIÓN - CÁMARA EMPRESARIAL DE SOFTWARE Y SERVICIOS INFORMÁTICOS (CESSI).</div> <!-- nombre de la Institución -->
-        <div class="education-date">Oct. 2021 - Dic. 2021</div> <!-- fecha de ingreso y finalización -->
-        <div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
-      </div>
-      <div class="line"></div>
-      <div class="empty">
-        <div class="education-logo-img">
-          <img class="education-img-ministerio" src="../assets/img/mindesarrollo.png" alt="Imagen Ministerio de Desarrollo"> <!-- logo Ministerio de Desarrollo -->
-          <img class="education-img-cessi" src="../assets/img/cessicolorC.png" alt="Imagen de la Camara Empresarial del Software"> <!-- logo CESSI -->
+      <div class="empty"></div> <!-- ESPACIO vacio -->
+      <div class="empty"></div> <!-- ESPACIO vacio -->
+      <div class="education-certification experience_icons">
+        <div class="p-0 bd-highlight" *ngIf="isLogged">
+          <div class="d-flex justify-content-end">
+            <div class="p-1 bd-highlight">
+              <button type="button" class="edit-buttons" routerLink="/editedu/{{ Educations.id }}"><img class="img-icons" src="assets/img/pencil-solid.png" alt="pencil-sharp">EDIT</button>
+            </div>
+            <div class="p-1 me-3 bd-highlight">
+              <button type="button" class="edit-buttons" (click)="delete(Educations.id)"><img class="img-icons" src="assets/img/trash-can-solid.png" alt="trash-outline">DELETE</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="empty">
-        <div class="education-logo-img">
-          <img class="education-img-bertoldi" src="../assets/img/bertoldilogo.png" alt="Bertoldi Academia"> <!-- logo BERTOLDI Academia-->
-          <img class="education-img-pivotpoint" src="../assets/img/pivotpointB.png" alt="Pivot Point Internacional"> <!-- logo PIVOT POINT Internacional-->
-        </div>
-      </div>
-      <div class="line"></div>
-      <div class="education"> <!-- una misma clase general para cada experiencia en particular. -->
-        <div class="education-certification">Estilista Unisex Internacional PIVOT POINT</div> <!-- Título de la Certificación -->
-        <div class="education-institution">BERTOLDI ACADEMIA</div> <!-- nombre de la Institución -->
-        <div class="education-date">Marzo 2019 - Diciembre 2020</div> <!-- fecha de ingreso y finalización -->
-        <div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
-      </div>
-      <div class="education education_left"> <!-- una misma clase general para cada experiencia en particular. -->
-        <div class="education-certification">Secretariado / Auxiliar Administrativo</div> <!-- Título de la Certificación -->
-        <div class="education-institution">INSTITUCIÓN CERVANTES</div> <!-- nombre de la Institución -->
-        <div class="education-date">Mayo 1998 - Diciembre 1998</div> <!-- fecha de ingreso y finalización -->
-        <div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
-      </div>
-      <div class="line"></div>
-      <div class="empty">
-        <div class="education-logo-img">
-          <img class="education-img-cervantes" src="../assets/img/cervantesiconsB.png" alt="Institución Cervantes"> <!-- logo Institución Cervantes -->
-        </div>
-      </div>
-      <div class="empty">
-        <div class="education-logo-img">
-          <img class="education-img-cervantes" src="../assets/img/cervantesiconsB.png" alt="Institución Cervantes"> <!-- logo Institución Cervantes -->
-        </div>
-      </div>
-      <div class="line"></div>
-      <div class="education"> <!-- una misma clase general para cada experiencia en particular. -->
-        <div class="education-certification">Ofimática & Computerized Typing</div> <!-- Título de la Certificacíon -->
-        <div class="education-institution">INSTITUCIÓN CERVANTES</div> <!-- nombre de la Institución -->
-        <div class="education-date">Mayo 1994 - Noviembre 1994</div> <!-- fecha de ingreso y finalización -->
-        <div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
-      </div>
-      <div class="education education_left"> <!-- una misma clase general para cada experiencia en particular. -->
-        <div class="education-certification">Diseño Industrial</div> <!-- Título de la Certificacíon -->
-        <div class="education-institution">FACULTAD DE ARQUITECTURA, URBANISMO Y DISEÑO (F.A.U.D.) - UNIVERSIDAD NACIONAL CÓRDOBA (U.N.C.)</div> <!-- nombre de la Institución -->
-        <div class="education-date">Febrero 1993 - Febrero 1995</div> <!-- fecha de ingreso y finalización -->
-        <div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
-      </div>
-      <div class="line"></div>
-      <div class="empty">
-        <div class="education-logo-img">
-          <img class="education-img-unc" src="../assets/img/unc.png" alt="logo facultad de Diseño"> <!-- logo UNC -->
-          <img class="education-img-facultad" src="../assets/img/logofaud.png" alt="logo facultad de Diseño"> <!-- logo universitario Facultad de Arqueitectura, Urbanismo y Diseño -->
-          <img class="education-img-uncicons" src="../assets/img/uncdesingicons.png" alt="Facultad de Arquitectura, Urbanismo y Diseño - Universidad Nacional de Córdoba"> <!-- logo unificado universitario -->
-        </div>
-      </div>
-      <div class="empty">
-        <div class="education-logo-img">
-          <img class="education-img-secundaria" src="../assets/img/secundariaiconsA.png" alt="Instituto Jesuita Sagrada Familia"> <!-- logo secundario Instituto Jesuita Sagrada Familia -->
-        </div>
-      </div>
-      <div class="line"></div>
-      <div class="education"> <!-- una misma clase general para cada experiencia en particular. -->
-        <div class="education-certification">Bachiller /Perito Mercantil</div> <!-- Título de la Certificación -->
-        <div class="education-institution">INSTITUTO SECUNDARIO JESUITA SAGRADA FAMILIA (IHS)</div> <!-- nombre de la Institución -->
-        <div class="education-date">Marzo 1988 - Noviembre 1992</div> <!-- fecha de ingreso y finalización -->
-        <div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
       </div>
     </div>
   </div>
 </div>
 </section>
+
+
+      <!--<div class="education education_left"> <!-- una misma clase general para cada experiencia en particular. -->
+        <!--<div class="education-certification">{{ Educations.descripcionE }}</div> <!-- Título de la Certificación -->
+        <!--<div class="education-institution">{{ Educations.nombreE }}</div> <!-- nombre de la Institución -->
+        <!--<div class="education-date">{{ Educations.periodoAniosE }}</div> <!-- fecha de ingreso y finalización -->
+        <!--<div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
+      <!--</div>
+      <div class="line"></div>
+      <div class="empty">
+        <div class="education-logo-img">
+          <img class="education-img-ministerio" src="{{ Educations.logoE }}" alt="Imagen Ministerio de Desarrollo"> <!-- logo Ministerio de Desarrollo -->
+          <!--<img class="education-img-cessi" src="{{ Educations.logoE }}" alt="Imagen de la Camara Empresarial del Software"> <!-- logo CESSI -->
+        <!--</div>
+      </div>
+      <div class="empty">
+        <div class="education-logo-img">
+          <img class="education-img-bertoldi" src="../assets/img/bertoldilogo.png" alt="Bertoldi Academia"> <!-- logo BERTOLDI Academia-->
+          <!--<img class="education-img-pivotpoint" src="../assets/img/pivotpointB.png" alt="Pivot Point Internacional"> <!-- logo PIVOT POINT Internacional-->
+        <!--</div>
+      </div>
+      <div class="line"></div>
+      <div class="education"> <!-- una misma clase general para cada experiencia en particular. -->
+        <!--<div class="education-certification">Estilista Unisex Internacional PIVOT POINT</div> <!-- Título de la Certificación -->
+        <!--<div class="education-institution">BERTOLDI ACADEMIA</div> <!-- nombre de la Institución -->
+        <!--<div class="education-date">Marzo 2019 - Diciembre 2020</div> <!-- fecha de ingreso y finalización -->
+        <!--<div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
+      <!--</div>
+      <div class="education education_left"> <!-- una misma clase general para cada experiencia en particular. -->
+        <!--<div class="education-certification">Secretariado / Auxiliar Administrativo</div> <!-- Título de la Certificación -->
+        <!--<div class="education-institution">INSTITUCIÓN CERVANTES</div> <!-- nombre de la Institución -->
+        <!--<div class="education-date">Mayo 1998 - Diciembre 1998</div> <!-- fecha de ingreso y finalización -->
+        <!--<div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
+      <!--</div>
+      <div class="line"></div>
+      <div class="empty">
+        <div class="education-logo-img">
+          <img class="education-img-cervantes" src="../assets/img/cervantesiconsB.png" alt="Institución Cervantes"> <!-- logo Institución Cervantes -->
+        <!--</div>
+      </div>
+      <div class="empty">
+        <div class="education-logo-img">
+          <img class="education-img-cervantes" src="../assets/img/cervantesiconsB.png" alt="Institución Cervantes"> <!-- logo Institución Cervantes -->
+        <!--</div>
+      </div>
+      <div class="line"></div>
+      <div class="education"> <!-- una misma clase general para cada experiencia en particular. -->
+        <!--<div class="education-certification">Ofimática & Computerized Typing</div> <!-- Título de la Certificacíon -->
+        <!--<div class="education-institution">INSTITUCIÓN CERVANTES</div> <!-- nombre de la Institución -->
+        <!--<div class="education-date">Mayo 1994 - Noviembre 1994</div> <!-- fecha de ingreso y finalización -->
+        <!--<div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
+      <!--</div>
+      <div class="education education_left"> <!-- una misma clase general para cada experiencia en particular. -->
+        <!--<div class="education-certification">Diseño Industrial</div> <!-- Título de la Certificacíon -->
+        <!--<div class="education-institution">FACULTAD DE ARQUITECTURA, URBANISMO Y DISEÑO (F.A.U.D.) - UNIVERSIDAD NACIONAL CÓRDOBA (U.N.C.)</div> <!-- nombre de la Institución -->
+        <!--<div class="education-date">Febrero 1993 - Febrero 1995</div> <!-- fecha de ingreso y finalización -->
+        <!--<div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
+      <!--</div>
+      <div class="line"></div>
+      <div class="empty">
+        <div class="education-logo-img">
+          <img class="education-img-unc" src="../assets/img/unc.png" alt="logo facultad de Diseño"> <!-- logo UNC -->
+          <!--<img class="education-img-facultad" src="../assets/img/logofaud.png" alt="logo facultad de Diseño"> <!-- logo universitario Facultad de Arqueitectura, Urbanismo y Diseño -->
+          <!--<img class="education-img-uncicons" src="../assets/img/uncdesingicons.png" alt="Facultad de Arquitectura, Urbanismo y Diseño - Universidad Nacional de Córdoba"> <!-- logo unificado universitario -->
+        <!--</div>
+      </div>
+      <div class="empty">
+        <div class="education-logo-img">
+          <img class="education-img-secundaria" src="../assets/img/secundariaiconsA.png" alt="Instituto Jesuita Sagrada Familia"> <!-- logo secundario Instituto Jesuita Sagrada Familia -->
+        <!--</div>
+      </div>
+      <div class="line"></div>
+      <div class="education"> <!-- una misma clase general para cada experiencia en particular. -->
+        <!--<div class="education-certification">Bachiller /Perito Mercantil</div> <!-- Título de la Certificación -->
+        <!--<div class="education-institution">INSTITUTO SECUNDARIO JESUITA SAGRADA FAMILIA (IHS)</div> <!-- nombre de la Institución -->
+        <!--<div class="education-date">Marzo 1988 - Noviembre 1992</div> <!-- fecha de ingreso y finalización -->
+        <!--<div class="education-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</div> <!-- Breve descripcion del contenido adquirdo -->
+      <!--</div>
+      <!--<div class="empty"></div> <!-- ESPACIO vacio -->
+      <!--<div class="empty"></div> <!-- ESPACIO vacio -->
+      <!--<div class="experience experience_icons">
+        <div class="p-0 bd-highlight" *ngIf="isLogged">
+          <div class="d-flex justify-content-end">
+            <div class="p-1 bd-highlight">
+              <button type="button" class="edit-buttons" routerLink="/editedu/{{ Educations.id }}"><img class="img-icons" src="assets/img/pencil-solid.png" alt="pencil-sharp">EDIT</button>
+            </div>
+            <div class="p-1 me-3 bd-highlight">
+              <button type="button" class="edit-buttons" (click)="delete(Educations.id)"><img class="img-icons" src="assets/img/trash-can-solid.png" alt="trash-outline">DELETE</button>
+            </div>
+          </div>
+        </div>
+      </div>-->

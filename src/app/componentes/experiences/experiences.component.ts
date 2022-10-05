@@ -26,19 +26,19 @@ export class ExperiencesComponent implements OnInit {
   }
 
   cargarExperiencia(): void {
-    this.sExperiences.lista().subscribe(data => { this.expe = data; })
+    this.sExperiences.lista().subscribe(data => {
+      this.expe = data;
+    })
   }
 
   delete(id?: number) {
     if (confirm("Desea eliminar?") == true) {
       if (id != undefined) {
-        this.sExperiences.delete(id).subscribe(
-          data => {
-            this.cargarExperiencia();
-          }, err => {
-            alert("No se pudo eliminar");
-          }
-        )
+        this.sExperiences.delete(id).subscribe(data => {
+          this.cargarExperiencia();
+        }, err => {
+          alert("No se pudo eliminar");
+        })
       }
     } else {
       alert("cancelado");

@@ -22,6 +22,8 @@ import { PortfoliowebComponent } from './componentes/portfolioweb/portfolioweb.c
 import { interceptorProvider } from './servicios/interceptor-service';
 import { NewExperiencesComponent } from './componentes/experiences/new-experiences.component';
 import { EditExperiencesComponent } from './componentes/experiences/edit-experiences.component';
+import { NewEducationsComponent } from './componentes/educations/new-educations.component';
+import { EditEducationsComponent } from './componentes/educations/edit-educations.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { EditExperiencesComponent } from './componentes/experiences/edit-experie
     LoginComponent,
     PortfoliowebComponent,
     NewExperiencesComponent,
-    EditExperiencesComponent
+    EditExperiencesComponent,
+    NewEducationsComponent,
+    EditEducationsComponent
   ],
   imports: [
     BrowserModule,
