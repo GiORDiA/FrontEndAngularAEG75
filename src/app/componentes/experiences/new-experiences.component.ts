@@ -38,7 +38,7 @@ export class NewExperiencesComponent implements OnInit {
     this.sExperiences.save(expe).subscribe(data => {
       alert("Experiencia añadida correctamente");
       this.router.navigate(['']);
-      }, err => {
+      },err =>{
         alert("Falló");
         this.router.navigate(['']);
       }

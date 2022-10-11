@@ -2,33 +2,59 @@
 <section class="skills">
 <div class="horizontal-padding vertical-padding section-skills"> <!-- microclase global en el espaciado-margen general en el eje horizontal y vertical de esta section -->
   <h2 class="skills-title">Hard & Soft Skills</h2>
+  <div class="p-0 mb-3 bd-highlight">
+    <div class="d-flex justify-content-center">
+      <div class="p-1 bd-highlight education-certification">
+        <button type="button" class="edit-buttons" routerLink="/nuevaskill" *ngIf="isLogged"><img class="img-iconsadd" src="assets/img/add-solid.png" alt="New Skills">NEW SKILLS</button>
+      </div>
+    </div>
+  </div>
   <ul class="skills-list">
-    <li class="skills-skill">
+    <li class="skills-skill" *ngFor="let Skills of skills">
       <div class="skill-img">
-        <img class="skill-img-html" src="../assets/img/HTMLa.png" alt="logo HTML"> <!-- logo HTML -->
+        <img class="skill-img-ofimatica" src="{{ Skills.imgSkill }}"> <!-- logo HTML -->
+        <img class="skill-img-computerized" src="{{ Skills.imgbSkill }}"> <!-- logo HTML -->
         <div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#04fc43;--num:75;">
+            <div class="percent" style="--clr:#04fc43;--num:{{ Skills.progress }};">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70"></circle>
               </svg>
               <div class="number">
-                <h2>75<span>%</span></h2>
-                <h3>HTML</h3>
+                <h2>{{ Skills.percentage }}<span>%</span></h2>
+                <h3>{{ Skills.nameSkill }}</h3>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="empty"></div> <!-- ESPACIO vacio -->
+      <div class="empty"></div> <!-- ESPACIO vacio -->
+      <div class="education-certification experience_icons">
+        <div class="p-0 bd-highlight" *ngIf="isLogged">
+          <div class="d-flex justify-content-end">
+            <div class="p-1 bd-highlight">
+              <button type="button" class="edit-buttons" routerLink="/editskill/{{ Skills.id }}"><img class="img-icons" src="assets/img/pencil-solid.png" alt="pencil-sharp">EDIT</button>
+            </div>
+            <div class="p-1 me-3 bd-highlight">
+              <button type="button" class="edit-buttons" (click)="delete(Skills.id)"><img class="img-icons" src="assets/img/trash-can-solid.png" alt="trash-outline">DELETE</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </li>
-    <li class="skills-skill">
+  </ul>
+</div>
+</section>
+
+    <!--<li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-css" src="../assets/img/CSSa.png" alt="logo CSS"> <!-- logo CSS -->
-        <div class="container">
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#fee800;--num:50;">
+            <div class="percent" style="--clr:rgb(254, 232, 0);--num:50;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -42,13 +68,13 @@
           </div>
         </div>
       </div>
-    </li>
-    <li class="skills-skill">
+    </li> -->
+    <!--<li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-js" src="../assets/img/JAVASCRIPTc.png" alt="logo JAVASCRIPT"> <!-- logo JAVASCRIPT -->
-        <div class="container">
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#06ccff;--num:25;">
+            <div class="percent" style="--clr:rgb(6, 204, 255);--num:25;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -66,9 +92,9 @@
     <li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-angular" src="../assets/img/ANGULARc.png" alt="logo ANGULAR"> <!-- logo ANGULAR -->
-        <div class="container">
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#ff9100;--num:25;">
+            <div class="percent" style="--clr:rgb(255, 145, 0);--num:25;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -86,9 +112,9 @@
     <li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-sql" src="../assets/img/SQL.png" alt="logo SQL"> <!-- logo SQL -->
-        <div class="container">
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#0D0ACA;--num:25;">
+            <div class="percent" style="--clr:rgb(13, 10, 202);--num:25;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -106,9 +132,9 @@
     <li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-ruby" src="../assets/img/Rubyb.png" alt="logo RUBY"> <!-- logo RUBY -->
-        <div class="container">
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#04fc43;--num:50;">
+            <div class="percent" style="--clr:rgb(4, 252, 67);--num:50;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -126,10 +152,10 @@
     <li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-git" src="../assets/img/Git.png" alt="logo Git"> <!-- logo GIT -->
-        <img class="skill-img-github" src="../assets/img/githubL.png" alt="logo GitHub"> <!-- logo GITHUB -->
-        <div class="container">
+        <!--<img class="skill-img-github" src="../assets/img/githubL.png" alt="logo GitHub"> <!-- logo GITHUB -->
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#fee800;--num:50;">
+            <div class="percent" style="--clr:rgb(254, 232, 0);--num:50;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -147,9 +173,9 @@
     <li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-flexboxgrid" src="../assets/img/GridvsFlexboxa.png" alt="logo FLEXBOX-GRID"> <!-- logo FLEXBOX-GRID -->
-        <div class="container">
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#04fc43;--num:75;">
+            <div class="percent" style="--clr:rgb(4, 252, 67);--num:75;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -167,9 +193,9 @@
     <li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-bootstrap" src="../assets/img/Bootstrapc.png" alt="logo BOOTSTRAP"> <!-- logo BOOTSTRAP -->
-        <div class="container">
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#fee800;--num:50;">
+            <div class="percent" style="--clr:rgb(254, 232, 0);--num:50;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -187,9 +213,9 @@
     <li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-figma" src="../assets/img/Figma.png" alt="logo FIGMA">FIGMA <!-- logo FIGMA -->
-        <div class="container">
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#04fc43;--num:50;">
+            <div class="percent" style="--clr:rgb(4, 252, 67);--num:50;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -207,10 +233,10 @@
     <li class="skills-skill">
       <div class="skill-img">
         <img class="skill-img-ofimatica" src="../assets/img/OfimaticaB.png" alt="logo OFIMÁTICA"> <!-- logo OFIMÁTICA -->
-        <img class="skill-img-computerized" src="../assets/img/ComputerizedTyping.png" alt="logo COMPUTERIZED TYPING"> <!-- logo COMPUTERIZED TYPING -->
-        <div class="container">
+        <!--<img class="skill-img-computerized" src="../assets/img/ComputerizedTyping.png" alt="logo COMPUTERIZED TYPING"> <!-- logo COMPUTERIZED TYPING -->
+        <!--<div class="container">
           <div class ="card">
-            <div class="percent" style="--clr:#fee800;--num:100;">
+            <div class="percent" style="--clr:rgb(254, 232, 0);--num:100;">
               <div class="dot"></div>
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
@@ -227,4 +253,4 @@
     </li>
   </ul>
 </div>
-</section>
+</section> -->

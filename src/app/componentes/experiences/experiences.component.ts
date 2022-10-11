@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Experiences } from 'src/app/model/experiences';
 import { ExperiencesService } from 'src/app/servicios/experiences.service';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+//import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { TokenService } from 'src/app/servicios/token.service';
+
 @Component({
   selector: 'app-experiences',
   templateUrl: './experiences.component.html',
@@ -11,12 +12,13 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class ExperiencesComponent implements OnInit {
   expe: Experiences[] = [];
 
-  constructor(private datosPorfolio:PorfolioService, private sExperiences: ExperiencesService, private tokenService: TokenService) { }
+  //private datosPorfolio:PorfolioService,
+  constructor(private sExperiences: ExperiencesService, private tokenService: TokenService) { }
 
   isLogged = false;
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos();
+    //this.datosPorfolio.obtenerDatos();
     this.cargarExperiencia();
     if (this.tokenService.getToken()) {
       this.isLogged = true;

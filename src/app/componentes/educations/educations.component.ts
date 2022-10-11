@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Educations } from 'src/app/model/educations';
 import { EducationsService } from 'src/app/servicios/educations.service';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+//import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
@@ -13,12 +13,13 @@ export class EducationsComponent implements OnInit {
 
   educacion: Educations[] = [];
 
-  constructor(private datosPorfolio:PorfolioService, private educacionS: EducationsService, private tokenService: TokenService) { }
+  //private datosPorfolio:PorfolioService
+  constructor(private educacionS: EducationsService, private tokenService: TokenService) { }
 
   isLogged = false;
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos();
+    //this.datosPorfolio.obtenerDatos();
     this.cargarEducacion();
     if (this.tokenService.getToken()) {
       this.isLogged = true;

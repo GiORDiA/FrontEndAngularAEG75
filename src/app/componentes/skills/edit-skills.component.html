@@ -1,0 +1,38 @@
+<div class="container-fluid" *ngIf="skills">
+  <div class="content-center">
+    <div class="p-5">
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="imgSkill"><b>Relative Path de la imagen de la habilidad</b></label>
+            <input type="text" class="form-control" id="imgSkill" name="imgSkill" placeholder="assets/images/nombreImg.extensión" [(ngModel)]="skills.imgSkill" required="imgSkill">
+          </div>
+          <div class="form-group">
+            <label for="imgbSkill"><b>Relative Path de la imagen b de la habilidad</b></label>
+            <input type="text" class="form-control" id="imgbSkill" name="imgbSkill" placeholder="assets/images/nombreImgb.extensión" [(ngModel)]="skills.imgbSkill" required="imgbSkill">
+          </div>
+          <div class="form-group">
+            <label for="color"><b>Color</b></label>
+            <input type="text" class="form-control" id="color" name="color" placeholder="Indicar número color ej: " [(ngModel)]="skills.color" required>
+          </div>
+          <div class="form-group">
+            <label for="progress"><b>Progreso</b></label>
+            <input type="number" class="form-control" id="progress" name="progress" placeholder="Indicar un número entre el 0 y el 100" [(ngModel)]="skills.progress" required>
+          </div>
+          <div class="form-group">
+            <label for="percentage"><b>Porcentaje</b></label>
+            <input type="number" class="form-control" id="percentage" name="percentage" placeholder="Indicar un número entre el 0 y el 100" [(ngModel)]="skills.percentage" required>
+          </div>
+          <div class="form-group">
+            <label for="nameSkill"><b>Nombre de la habilidad</b></label>
+            <input type="text" class="form-control" id="nameSkill" name="nameSkill" [(ngModel)]="skills.nameSkill" required>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-success">Modify skills</button>
+            <a href="http://localhost:4200" class="btn btn-success">Return</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
