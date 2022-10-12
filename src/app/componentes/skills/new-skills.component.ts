@@ -16,7 +16,7 @@ export class NewSkillsComponent implements OnInit {
   percentage: number = 0;
   imgSkill: string = "";
   imgbSkill: string = "";
-  color: number = 0;
+  color: string = "";
 
   constructor(private skillsS: SkillsService, private router: Router, private activatedRouter: ActivatedRoute,
     private tokenService: TokenService) { }
