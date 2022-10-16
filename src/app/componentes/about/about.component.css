@@ -64,7 +64,7 @@
   font-weight: bold; /* que este resaltado en negrita */
   margin: 0; /* por defecto los navegadores agregan margenes, asi lo anulo */
   margin-top: 15px;
-  color: var(--primary-color);
+  color: var(--text-yellow);
   font-family: 'Noto Sans', sans-serif; /* si esta fuente no lo encuentra por defecto toma el sans-serif del sistema operativo */
 }
 
@@ -73,7 +73,7 @@
   font-size: 25px !important;
   font-weight: bold; /* que este resaltado en negrita */
   margin: 0; /* por defecto los navegadores agregan margenes, asi lo anulo */
-  color: var(--primary-color);
+  color: var(--theme-color);
   font-family: 'Noto Sans', sans-serif; /* si esta fuente no lo encuentra por defecto toma el sans-serif del sistema operativo */
   margin-bottom: 15px; /* margen inferior separado del parrafo */
 }
@@ -161,6 +161,10 @@ button {
 button.learn-more {
   width: 12rem;
   height: auto;
+}
+
+button.add-about {
+  cursor: none;
 }
 
 button.learn-more .circle {

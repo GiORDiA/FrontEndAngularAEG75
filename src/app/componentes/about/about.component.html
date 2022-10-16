@@ -2,23 +2,36 @@
 <section class="about">
 <div class="about-img-section"> <!-- Div Banner + FOTOPerfil + info profesional sobre mí -->
   <div class="banner-img-section">
-    I<img class="banner-img" id="about" src="../assets/img/banner1.png" alt="Banner"> <!-- imagen del banner -->
+    I<img class="banner-img" id="about" src="../assets/img/banner.png" alt="Banner"> <!-- imagen del banner -->
   </div>
   <div class="horizontal-padding vertical-padding"> <!-- microclase global en el espaciado-margen general en el eje horizontal y vertical de esta section -->
-    <div class="about-info">
+    <div class="about-info" *ngFor="let About of about">
       <div class="about-perfil-img">
-        <img class="about-img" src="../assets/img/fotperfilA.png" alt="Full Stack Developer Jr"> <!-- foto perfil -->
-        <h1 class="about-name" id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
-        <h2 class="about-specialty">Full Stack Developer Jr.</h2>
-        <p class="about-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui in.</p> <!-- Breve reseña profesional sobre mí-->
+        <img class="about-img" src="{{ About.imgPerfil }}" alt="Profile Picture"> <!-- foto perfil -->
+        <h1 class="about-name" id="nombre">{{ About.nombreCompleto }}</h1> <!-- {{persona.nombre}} {{persona.apellido}} -->
+        <h2 class="about-specialty">{{ About.profesion }}</h2>
+        <p class="about-details">{{ About.descripcion }}</p> <!-- Breve reseña profesional sobre mí-->
         <button class="about-btn">
-        Download cv
+          <a download="CV" href="{{ About.cv }}">Download cv<img class="edit-buttons img-iconsadd" src="assets/img/Cv-archive.png" alt="Cv archive">
+          </a>
         </button>
       </div>
       <div class="body-acerca">
         <div class="acerca-de"> <!-- Información profesional -->
-          <h2 class="title-acerca-de">Acerca de</h2>
-          <p class="acerca-de-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, provident porro corrupti quas omnis numquam voluptas voluptatem quod maxime iste modi laboriosam earum dolorem inventore culpa repudiandae! Repellendus, eum eligendi.</p>
+          <div class="p-0 mb-0 education-certification experience_icons">
+            <div class="p-0 bd-highlight" *ngIf="isLogged">
+              <div class="d-flex justify-content-end">
+                <div class="p-1 m-0 bd-highlight">
+                  <button type="button" class="edit-buttons" routerLink="/editabout/{{ About.id }}"><img class="img-icons" src="assets/img/pencil-solid.png" alt="pencil-sharp">EDIT</button>
+                </div>
+                <div class="p-1 m-0 bd-highlight">
+                  <button type="button" class="edit-buttons" (click)="delete(About.id)"><img class="img-icons" src="assets/img/trash-can-solid.png" alt="trash-outline">DELETE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="mt-0 title-acerca-de">Acerca de</h4>
+          <p class="acerca-de-details">{{ About.about }}</p>
           <button class="learn-more">
             <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
@@ -27,6 +40,16 @@
           </button>
         </div>
       </div>
+    </div>
+    <div class="p-0 mb-0 d-flex justify-content-center">
+      <button class="learn-more add-about">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Add ABOUT
+          <button type="button" class="edit-buttons" routerLink="/nuevoabout" *ngIf="isLogged && about.length == 0"><img class="p-0 m-0 img-iconsadd" src="assets/img/add-solid.png" alt="New About"></button>
+        </span>
+      </button>
     </div>
   </div>
 </div>

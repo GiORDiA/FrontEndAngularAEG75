@@ -47,5 +47,4 @@ export class EducationsComponent implements OnInit {
       alert("cancelado");
     }
   }
-
 }
