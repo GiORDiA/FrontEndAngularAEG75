@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Skills } from 'src/app/model/skills';
-//import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { SkillsService } from 'src/app/servicios/skills.service';
 import { TokenService } from 'src/app/servicios/token.service';
+//import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
   selector: 'app-skills',
@@ -31,7 +31,7 @@ export class SkillsComponent implements OnInit {
     this.skillsServ.lista().subscribe(data => {this.skills = data});
   }
 
-  delete(id?: number) {
+  delete(id: number) {
     if (confirm("Desea eliminar?") == true) {
       if (id != undefined) {
         this.skillsServ.delete(id).subscribe(data => {

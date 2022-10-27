@@ -19,7 +19,7 @@ export class NewAboutComponent implements OnInit {
 
   constructor(private servAbout: AboutService, private router: Router, private activatedRouter: ActivatedRoute,
   private tokenService: TokenService) { }
-    isLogged = false;
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];

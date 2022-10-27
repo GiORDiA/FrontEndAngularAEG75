@@ -15,9 +15,8 @@ export class NewExperiencesComponent implements OnInit {
   logoExp: string = '';
   periodoAniosExp: string = '';
 
-  constructor(private sExperiences: ExperiencesService, private router: Router, private activatedRouter: ActivatedRoute,
-    private tokenService: TokenService) { }
-    isLogged = false;
+  constructor(private sExperiences: ExperiencesService, private router: Router, private activatedRouter: ActivatedRoute, private tokenService: TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];

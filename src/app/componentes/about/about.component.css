@@ -58,6 +58,19 @@
   animation-iteration-count: infinite;
 }
 
+.about-imgB {
+  width: 30%;  /* foto de perfil que sea el 75% de mi viewport */
+  max-width: 50px; /* que la imagen no se amplie más alla de los 350 pixeles */
+  border-radius: 50%;
+  margin-top: 0px;
+  transform: translateY(10px);
+  box-shadow: 0 15px 35px var(--navbar-shallow-color);
+  border: 1px solid var(--navbar-shallow-color);
+  transition: 0.8s;
+  animation-name: mover;
+  animation-iteration-count: infinite;
+}
+
 /* h1 Titulo Nombre*/
 .about-name {
   font-size: 50px !important;
@@ -299,6 +312,14 @@ button:hover .button-text {
     max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
     /*transform: scaleX(-1);*/
     margin-top: -150px;
+  }
+
+  .about-imgB {
+    width: 15%;  /* foto de perfil que sea el 75% de mi viewport */
+    max-width: 80px; /* que la imagen no se amplie más alla de los 350 pixeles */
+    /*transform: scaleX(-1);*/
+    margin-left: 0px;
+    padding-left: 0px;
   }
 
 /* h1 Titulo Nombre*/

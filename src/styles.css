@@ -13,6 +13,7 @@
   --text-color: black;
   --navbar-shallow-color: #0215fd; /* color sombra linea barra de navegación */
   --menu-mobile-background-color: #3A4460; /* color background del menu dispositivo mobil */
+  --background-color-body: #05cdff;
   --bd-violet-rgb: 112.520718,44.062154,249.437846;
   --bd-purple: #4c0bce;
   --bd-violet: #712cf9;
@@ -43,7 +44,7 @@
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
-  --bs-info: #0dcaf0;
+  --bs-info: rgb(13, 202, 240);
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
@@ -78,7 +79,7 @@
 
 .body {
   font-family:'Montserrat', sans-serif;
-  background-color: var(--bs-gray-500);
+  background-color: var(--background-color-body);
   color: var(--text-color);
   padding-top: 140px; /* para tener espacio en el top body al estar fijado el navbar (.topheader position fixed) barra de navegación */
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);

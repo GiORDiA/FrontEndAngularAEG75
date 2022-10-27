@@ -18,9 +18,8 @@ export class NewSkillsComponent implements OnInit {
   imgbSkill: string = "";
   color: string = "";
 
-  constructor(private skillsS: SkillsService, private router: Router, private activatedRouter: ActivatedRoute,
-    private tokenService: TokenService) { }
-    isLogged = false;
+  constructor(private skillsS: SkillsService, private router: Router, private activatedRouter: ActivatedRoute,  private tokenService: TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];

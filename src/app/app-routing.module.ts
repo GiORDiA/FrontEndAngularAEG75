@@ -10,6 +10,9 @@ import { NewSkillsComponent } from './componentes/skills/new-skills.component';
 import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
 import { NewAboutComponent } from './componentes/about/new-about.component';
 import { EditAboutComponent } from './componentes/about/edit-about.component';
+import { NewProjectsComponent } from './componentes/projects/new-projects.component';
+import { EditProjectsComponent } from './componentes/projects/edit-projects.component';
+
 
 const routes: Routes = [
   { path: '', component: PortfoliowebComponent },
@@ -21,7 +24,9 @@ const routes: Routes = [
   { path: 'nuevaskill', component: NewSkillsComponent },
   { path: 'editskill/:id', component: EditSkillsComponent },
   { path: 'nuevoabout', component:NewAboutComponent },
-  { path: 'editabout/:id', component:EditAboutComponent }
+  { path: 'editabout/:id', component:EditAboutComponent },
+  { path: 'nuevoproyecto', component:NewProjectsComponent },
+  { path: 'editproyecto/:id', component:EditProjectsComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Educations } from 'src/app/model/educations';
 import { EducationsService } from 'src/app/servicios/educations.service';
-//import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { TokenService } from 'src/app/servicios/token.service';
+//import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
   selector: 'app-educations',
@@ -29,12 +29,10 @@ export class EducationsComponent implements OnInit {
   }
 
   cargarEducacion(): void{
-    this.educacionS.lista().subscribe(data => {
-      this.educacion = data;
-    })
+    this.educacionS.lista().subscribe(data => {this.educacion = data});
   }
 
-  delete(id?: number) {
+  delete(id: number) {
     if (confirm("Desea eliminar?") == true) {
       if (id != undefined) {
         this.educacionS.delete(id).subscribe(data => {

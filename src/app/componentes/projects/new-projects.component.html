@@ -1,0 +1,94 @@
+<div class="container-fluid">
+  <div class="content-center">
+    <div class="p-5">
+      <div>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nameProject"><b>First Project Name</b></label>
+            <input type="text" class="form-control" id="nameProject" name="nameProject" [(ngModel)]="nameProject" required>
+          </div>
+          <div class="form-group">
+            <label for="namePjB"><b>Second Project Name</b></label>
+            <input type="text" class="form-control" id="namePjB" name="namePjB" [(ngModel)]="namePjB" required>
+          </div>
+          <div class="form-group">
+            <label for="namePjC"><b>Third Project Name</b></label>
+            <input type="text" class="form-control" id="namePjC" name="namePjC" [(ngModel)]="namePjC" required>
+          </div>
+          <div class="form-group">
+            <label for="namePjD"><b>Fourth Project Name</b></label>
+            <input type="text" class="form-control" id="namePjD" name="namePjD" [(ngModel)]="namePjD" required>
+          </div>
+          <div class="form-group">
+            <label for="imgProjectA"><b>Relative Path de la imagen del Proyecto</b></label>
+            <input type="text" class="form-control" id="imgProjectA" name="imgProjectA" placeholder="/assets/img/nombreImagen.extensión" [(ngModel)]="imgProjectA" required="imgProjectA">
+          </div>
+          <div class="form-group">
+            <label for="imgProjectB"><b>Relative Path de la imagen del Proyecto</b></label>
+            <input type="text" class="form-control" id="imgProjectB" name="imgProjectB" placeholder="/assets/img/nombreImagen.extensión" [(ngModel)]="imgProjectB" required="imgProjectB">
+          </div>
+          <div class="form-group">
+            <label for="imgProjectC"><b>Relative Path de la imagen del Proyecto</b></label>
+            <input type="text" class="form-control" id="imgProjectC" name="imgProjectC" placeholder="/assets/img/nombreImagen.extensión" [(ngModel)]="imgProjectC" required="imgProjectC">
+          </div>
+          <div class="form-group">
+            <label for="imgProjectD"><b>Relative Path de la imagen del Proyecto</b></label>
+            <input type="text" class="form-control" id="imgProjectD" name="imgProjectD" placeholder="/assets/img/nombreImagen.extensión" [(ngModel)]="imgProjectD" required="imgProjectD">
+          </div>
+          <div class="form-group">
+            <label for="dateProjectA"><b>Date of ralization of the project</b></label>
+            <input type="text" class="form-control" id="dateProjectA" name="dateProjectA" placeholder="Indicar fecha de ralización del proyecto ej: May'2021" [(ngModel)]="dateProjectA" required>
+          </div>
+          <div class="form-group">
+            <label for="dateProjectB"><b>Date of ralization of the project</b></label>
+            <input type="text" class="form-control" id="dateProjectB" name="dateProjectB" placeholder="Indicar fecha de ralización del proyecto ej: May'2021" [(ngModel)]="dateProjectB" required>
+          </div>
+          <div class="form-group">
+            <label for="dateProjectC"><b>Date of ralization of the project</b></label>
+            <input type="text" class="form-control" id="dateProjectC" name="dateProjectC" placeholder="Indicar fecha de ralización del proyecto ej: May'2021" [(ngModel)]="dateProjectC" required>
+          </div>
+          <div class="form-group">
+            <label for="dateProjectD"><b>Date of ralization of the project</b></label>
+            <input type="text" class="form-control" id="dateProjectD" name="dateProjectD" placeholder="Indicar fecha de ralización del proyecto ej: May'2021" [(ngModel)]="dateProjectD" required>
+          </div>
+          <div class="form-group">
+            <label for="linkProjectA"><b>Link of the Project</b></label>
+            <input type="text" class="form-control" id="linkProjectA" name="linkProjectA" placeholder="Indicar el link of the Project ej: https://sitioweb" [(ngModel)]="linkProjectA" required>
+          </div>
+          <div class="form-group">
+            <label for="linkProjectB"><b>Link of the Project</b></label>
+            <input type="text" class="form-control" id="linkProjectB" name="linkProjectB" placeholder="Indicar el link of the Project ej: https://sitioweb" [(ngModel)]="linkProjectB" required>
+          </div>
+          <div class="form-group">
+            <label for="linkProjectC"><b>Link of the Project</b></label>
+            <input type="text" class="form-control" id="linkProjectC" name="linkProjectC" placeholder="Indicar el link of the Project ej: https://sitioweb" [(ngModel)]="linkProjectC" required>
+          </div>
+          <div class="form-group">
+            <label for="linkProjectD"><b>Link of the Project</b></label>
+            <input type="text" class="form-control" id="linkProjectD" name="linkProjectD" placeholder="Indicar el link of the Project ej: https://sitioweb" [(ngModel)]="linkProjectD" required>
+          </div>
+          <div class="form-group">
+            <label for="descriptionProjectA"><b>Project description</b></label>
+            <input type="text" class="form-control" id="descriptionProjectA" name="descriptionProjectA" placeholder="Representative content description for the first project." [(ngModel)]="descriptionProjectA" required>
+          </div>
+          <div class="form-group">
+            <label for="descriptionProjectB"><b>Project description</b></label>
+            <input type="text" class="form-control" id="descriptionProjectB" name="descriptionProjectB" placeholder="Representative content description for the second project." [(ngModel)]="descriptionProjectB" required>
+          </div>
+          <div class="form-group">
+            <label for="descriptionProjectC"><b>Project description</b></label>
+            <input type="text" class="form-control" id="descriptionProjectC" name="descriptionProjectC" placeholder="Representative content description for the third project." [(ngModel)]="descriptionProjectC" required>
+          </div>
+          <div class="form-group">
+            <label for="descriptionProjectD"><b>Project description</b></label>
+            <input type="text" class="form-control" id="descriptionProjectD" name="descriptionProjectD" placeholder="Representative content description for the fourth project." [(ngModel)]="descriptionProjectD" required>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-success">Add project</button>
+            <a href="http://localhost:4200" class="btn btn-success">Return</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

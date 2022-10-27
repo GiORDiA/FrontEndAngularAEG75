@@ -7,12 +7,15 @@
   <div class="horizontal-padding vertical-padding"> <!-- microclase global en el espaciado-margen general en el eje horizontal y vertical de esta section -->
     <div class="about-info" *ngFor="let About of about">
       <div class="about-perfil-img">
-        <img class="about-img" src="{{ About.imgPerfil }}" alt="Profile Picture"> <!-- foto perfil -->
+        <div class="d-flex justify-content-center">
+          <img class="about-img" src="{{ About.imgPerfil }}" alt="Profile Picture">
+          <img class="about-imgB" src="{{ About.imgPerfil }}" alt="Profile Picture">
+        </div>        
         <h1 class="about-name" id="nombre">{{ About.nombreCompleto }}</h1> <!-- {{persona.nombre}} {{persona.apellido}} -->
         <h2 class="about-specialty">{{ About.profesion }}</h2>
         <p class="about-details">{{ About.descripcion }}</p> <!-- Breve reseña profesional sobre mí-->
         <button class="about-btn">
-          <a download="CV" href="{{ About.cv }}">Download cv<img class="edit-buttons img-iconsadd" src="assets/img/Cv-archive.png" alt="Cv archive">
+          <a download="CV" href="{{ About.cv }}">Download CV<img class="edit-buttons img-iconsadd" src="assets/img/Cv-archive.png" alt="Cv archive">
           </a>
         </button>
       </div>

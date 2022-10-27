@@ -70,7 +70,7 @@
   flex-wrap: wrap; /* anulo el scroll horizontal para que los elementos esten uno debajo del otro, que por defecto esta en nowrap*/
   justify-content: space-around; /* para que el contenido este centrado el eje horizontal */
   gap: 40px; /* circle*/
-  background-color: #06ccff;
+  background-color: #adb5bd;
   border: 1px solid #0215fd;
 }
 

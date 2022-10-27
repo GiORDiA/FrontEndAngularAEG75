@@ -32,12 +32,10 @@ export class AboutComponent implements OnInit {
   }
 
   cargarAbout(): void{
-    this.aboutServ.lista().subscribe(data => {
-      this.about = data;
-    })
+    this.aboutServ.lista().subscribe(data => {this.about = data});
   }
 
-  delete(id?: number) {
+  delete(id: number) {
     if (confirm("Desea eliminar?") == true) {
       if (id != undefined) {
         this.aboutServ.delete(id).subscribe(data => {

@@ -16,7 +16,7 @@ export class SkillsService {
   }
 
   public detail(id: number): Observable<Skills>{
-    return this.httpClient.get<Skills>(this.URL + `detail/${id}`)
+    return this.httpClient.get<Skills>(this.URL + `detail/${id}`);
   }
 
   public save(skills: Skills): Observable<any>{

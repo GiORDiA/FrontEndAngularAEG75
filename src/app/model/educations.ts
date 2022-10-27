@@ -1,11 +1,11 @@
 export class Educations {
-  id?: number;
-  nombreE: string;
-  descripcionE: string;
-  logoE: string;
-  logobE: string;
-  logocE: string;
-  periodoAniosE: string;
+  id : number;
+  nombreE : string;
+  descripcionE : string;
+  logoE : string;
+  logobE : string;
+  logocE : string;
+  periodoAniosE : string;
 
   constructor(nombreE: string, descripcionE: string, logoE: string, logobE: string, logocE: string, periodoAniosE: string){
     this.nombreE = nombreE;
