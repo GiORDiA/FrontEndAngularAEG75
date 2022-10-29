@@ -12,6 +12,7 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class NewAboutComponent implements OnInit {
   about:string="";
   imgPerfil: string = '';
+  imgAuthor: string = '';
   nombreCompleto: string = '';
   profesion: string = '';
   descripcion: string = '';
@@ -36,7 +37,7 @@ export class NewAboutComponent implements OnInit {
   }
 
   onCreate(): void{
-    const about = new About(this.about, this.imgPerfil, this.nombreCompleto, this.profesion, this.descripcion, this.cv);
+    const about = new About(this.about, this.imgPerfil, this.imgAuthor, this.nombreCompleto, this.profesion, this.descripcion, this.cv);
     this.servAbout.save(about).subscribe(data =>{
       alert("About añadida correctamente");
       this.router.navigate(['']);

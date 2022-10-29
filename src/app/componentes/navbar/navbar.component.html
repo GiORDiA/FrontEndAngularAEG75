@@ -15,13 +15,15 @@
           <a href="#" class="twitter"><img src="../assets/img/TwitterAa.png" alt="Twitter" id="twitter"></a>
           <a href="#" class="linkedin"><img src="../assets/img/LinkedinAa.png" alt="Linkedin" id="Linkedin"></a>
           <a href="#" class="discord"><img src="../assets/img/DiscordAa.png" alt="Discord" id="Discord"></a>
+
         </div>
       </div>
       <div class="btn-login">
         <a class="btn btn-primary" href="/login" role="button" *ngIf="!isLogged">Login</a>
         <button type="button" class="btn btn-primary btn-logout" (click)="onLogOut()" *ngIf="isLogged"><b>Logout</b></button>
       </div>
-      <div class="container py-2">
+      <!-- =============== Aclaración: desarrollaré la codificaíon extra de esta parte por falta de tiempo en una segunda etapa ================= -->
+      <!--<div class="container py-2">
         <div class="form-check form-switch">
           <input class="form-check-input" type="checkbox" id="darkSwitch" checked>
           <label for="darkSwitch" class="form-check-label">
@@ -29,7 +31,7 @@
             <i class="bi-brightness-high" style="font-size: 15px; color: var(--bs-warning);"></i>
           </label>
         </div>
-      </div>
+      </div> -->
     </div>
   </nav>
 

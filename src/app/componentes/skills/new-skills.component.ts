@@ -11,12 +11,12 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class NewSkillsComponent implements OnInit {
 
-  nameSkill: string = "";
+  nameSkill: string = '';
   progress: number = 0;
   percentage: number = 0;
-  imgSkill: string = "";
-  imgbSkill: string = "";
-  color: string = "";
+  imgSkill: string = '';
+  imgbSkill: string = '';
+  color: string = '';
 
   constructor(private skillsS: SkillsService, private router: Router, private activatedRouter: ActivatedRoute,  private tokenService: TokenService) { }
   isLogged = false;

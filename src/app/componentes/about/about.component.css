@@ -49,7 +49,8 @@
   animation-iteration-count: infinite;
 }
 
-.about-img:hover {
+.about-img:hover,
+.about-imgB:hover{
   transform: translateY(10px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   transition: 0.8s;
@@ -312,14 +313,6 @@ button:hover .button-text {
     max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
     /*transform: scaleX(-1);*/
     margin-top: -150px;
-  }
-
-  .about-imgB {
-    width: 15%;  /* foto de perfil que sea el 75% de mi viewport */
-    max-width: 80px; /* que la imagen no se amplie más alla de los 350 pixeles */
-    /*transform: scaleX(-1);*/
-    margin-left: 0px;
-    padding-left: 0px;
   }
 
 /* h1 Titulo Nombre*/
