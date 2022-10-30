@@ -14,7 +14,7 @@
     <div class="experiences-grid" *ngFor="let Projects of proyectos">
       <div id="SliderProject" class="carousel slide" data-bs-ride="false">
         <div class="carousel-indicators"> <!-- Indicadores de cada sliderd -->
-          <button type="button" data-bs-target="#SliderProject" data-bs-slide-to="0" class="active" aria-current="true" style="background-color: rgb(13,202,240);" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#SliderProject" data-bs-slide-to="0" class="active" aria-current="true" style="background-color: rgb(13,202,240);" aria-label="Slide 1"></button> <!-- rgb(13,202,240); -->
           <button type="button" data-bs-target="#SliderProject" data-bs-slide-to="1" style="background-color: rgb(13,202,240);" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#SliderProject" data-bs-slide-to="2" style="background-color: rgb(13,202,240);" aria-label="Slide 3"></button>
           <button type="button" data-bs-target="#SliderProject" data-bs-slide-to="3" style="background-color: rgb(13,202,240);" aria-label="Slide 4"></button>
@@ -23,7 +23,7 @@
           <div class="carousel-item active">
             <img src="{{ Projects.imgProjectA }}" class="d-block w-100 rounded-4" alt="Image of the First Project - Attached image of the project.">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="p-0 m-0"><b>{{ Projects.nameProject }}</b></h5>
+              <h5 class="p-0 m-0 text-decoration-underline"><b>{{ Projects.nameProject }}</b></h5>
               <div class="d-flex justify-content-center text-center">
                 <h6 class="p-2 m-0 ..."><time>{{ Projects.dateProjectA }}</time></h6>
                 <a href="{{ Projects.linkProjectA }}" class="btn" target="_blank">Link</a>
@@ -34,7 +34,7 @@
           <div class="carousel-item">
             <img src="{{ Projects.imgProjectB }}" class="d-block w-100 rounded-4" alt="Image of the Second Project - Attached image of the project.">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="p-0 m-0"><b>{{ Projects.namePjB }}</b></h5>
+              <h5 class="p-0 m-0 text-decoration-underline"><b>{{ Projects.namePjB }}</b></h5>
               <div class="d-flex justify-content-center text-center">
                 <h6 class="p-2 m-0 ..."><time>{{ Projects.dateProjectB }}</time></h6>
                 <a href="{{ Projects.linkProjectB }}" class="btn" target="_blank">Link</a>
@@ -45,7 +45,7 @@
           <div class="carousel-item">
             <img src="{{ Projects.imgProjectC }}" class="d-block w-100 rounded-4" alt="Image of the Third Project - Attached image of the project.">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="p-0 m-0"><b>{{ Projects.namePjC }}</b></h5>
+              <h5 class="p-0 m-0 text-decoration-underline"><b>{{ Projects.namePjC }}</b></h5>
               <div class="d-flex justify-content-center text-center">
                 <h6 class="p-2 m-0 ..."><time>{{ Projects.dateProjectC }}</time></h6>
                 <a href="{{ Projects.linkProjectC }}" class="btn" target="_blank">Link</a>
@@ -56,7 +56,7 @@
           <div class="carousel-item">
             <img src="{{ Projects.imgProjectD }}" class="d-block w-100 rounded-4" alt="Image of the Fourth Project - Attached image of the project.">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="p-0 m-0"><b>{{ Projects.namePjD }}</b></h5>
+              <h5 class="p-0 m-0 text-decoration-underline"><b>{{ Projects.namePjD }}</b></h5>
               <div class="d-flex justify-content-center text-center">
                 <h6 class="p-2 m-0 ..."><time>{{ Projects.dateProjectD }}</time></h6>
                 <a href="{{ Projects.linkProjectD }}" class="btn" target="_blank">Link</a>

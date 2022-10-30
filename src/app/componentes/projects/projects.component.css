@@ -134,4 +134,9 @@
     top: 100%;
     z-index: 1;
   }
+
+  .carousel-caption {
+    color: var(--text-yellow);
+  }
+
 }

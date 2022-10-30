@@ -20,8 +20,8 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     /*this.datosPorfolio.obtenerDatos();*/
-    /*this.personaService.getPersona().subscribe(data => {
-      this.persona = data})*/
+    this.personaService.getPersona().subscribe(data => {
+      this.persona = data})
     if(this.tokenService.getToken()){
       this.isLogged=true;
     }else{
@@ -34,8 +34,8 @@ export class NavbarComponent implements OnInit {
     window.location.reload();
   }
 
-  /*login(){
-    this.router.navigate(['/login']);
+  /*toggleMenu(){
+    this.router.navigate(['/src/menuopened.js']);
   }*/
 
 }
