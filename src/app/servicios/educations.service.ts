@@ -7,7 +7,8 @@ import { Educations } from '../model/educations';
   providedIn: 'root'
 })
 export class EducationsService {
-  URL = 'http://localhost:8080/educacion/';
+  // URL = 'http://localhost:8080/educacion/';
+  URL = 'https://backendspringbootaeg75.herokuapp.com/educacion/';
 
   constructor(private httpClient : HttpClient) { }
 

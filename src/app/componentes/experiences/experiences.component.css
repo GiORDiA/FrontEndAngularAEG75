@@ -1,13 +1,13 @@
-/* _______________________________________________________________________*/
-/* ================::::::::::COMPONENT experiences ::::::::::==================*/
-/* :::::Para Dispositivos MOBILES:::: */
-/* section general de Experiencias */
+  /* _______________________________________________________________________*/
+  /* ================::::::::::COMPONENT experiences ::::::::::==================*/
+  /* :::::Para Dispositivos MOBILES:::: */
+  /* section general de Experiencias */
 .experiences {
   display: flex;
   flex-direction: column; /* para integrar las imagenes ola en columna*/
 }
 
-/* section del cuerpo de experiencias */
+  /* section del cuerpo de experiencias */
 .experiences-body {
   max-width: 980px; /* que tenga un ancho máximo a 980px */
   margin: 0 auto; /* para centrar el margen de los elementos ya que fijamos en 10px dentro de los elementos skills-skill y por defecto lo alinea a la izquierda */
@@ -75,7 +75,7 @@
   height:100%;
 }
 
-/* al rededor de cada experiencia*/
+  /* al rededor de cada experiencia*/
 .experience {
   padding: 25px; /* añadimos espacios */
   max-width: 500px; /* para que el texto al ampliar el viewport no se amplie a lo ancho le pongo un máximo de 6 -7 palabras. */
@@ -122,10 +122,10 @@
   align-items: center;
 }
 
-/* _______________________________________________________________________*/
-/* ==========================RESPONSIVE=============================*/
+  /* _______________________________________________________________________*/
+  /* ==========================RESPONSIVE=============================*/
 
-/* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+  /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media (min-width: 950px) {
 
   .experiences-title {

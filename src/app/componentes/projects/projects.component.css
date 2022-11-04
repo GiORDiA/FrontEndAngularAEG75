@@ -1,13 +1,13 @@
-/* _______________________________________________________________________*/
-/* ================::::::::::COMPONENT projects ::::::::::==================*/
-/* :::::Para Dispositivos MOBILES:::: */
-/* section general de Experiencias */
+  /* _______________________________________________________________________*/
+  /* ================::::::::::COMPONENT projects ::::::::::==================*/
+  /* :::::Para Dispositivos MOBILES:::: */
+  /* section general de Experiencias */
 .projects {
   display: flex;
   flex-direction: column; /* para integrar las imagenes ola en columna*/
 }
 
-/* section del cuerpo de Educación */
+  /* section del cuerpo de Educación */
 .projects-body {
   max-width: 980px; /* que tenga un ancho máximo a 980px */
   margin: 0 auto; /* para centrar el margen de los elementos ya que fijamos en 10px dentro de los elementos skills-skill y por defecto lo alinea a la izquierda */
@@ -76,10 +76,10 @@
   height:100%;
 }
 
-/* _______________________________________________________________________*/
-/* ==========================RESPONSIVE=============================*/
+  /* _______________________________________________________________________*/
+  /* ==========================RESPONSIVE=============================*/
 
-/* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+  /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media (min-width: 950px) {
 
   .projects-title {

@@ -1,9 +1,9 @@
-/* _______________________________________________________________________*/
-/* ================::::::::::COMPONENT navbar ::::::::::==================*/
+  /* _______________________________________________________________________*/
+  /* ================::::::::::COMPONENT navbar ::::::::::==================*/
 
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
-/* :::::Para Dispositivos DESKTOP:::: */
-/* seleccionamos los diferentes elementos que tienen clases: */
+  /* :::::Para Dispositivos DESKTOP:::: */
+  /* seleccionamos los diferentes elementos que tienen clases: */
 .topheader {
   box-shadow: 0 4px 5px var(--navbar-shallow-color); /* linea sombra de la caja, correr el elemento del eje: X= 0, Y= 4px hacia abajo, que este difuminado, color */
   position: fixed; /*posición fija del Header con respecto del viewport como barra completa no se oculta con el scroll */
@@ -14,7 +14,7 @@
   z-index: 100; /* Al ser position fixed barra superior evito que el resto de los elementos pasen por encima en el viewport al hacer scroll con z-index, por defecto es 0 pero al elevar su valor se logra evitarlo por detras */
 }
 
-/* clases barra de navegacion */
+  /* clases barra de navegacion */
 .topnav {
   display: flex; /* los elementos se colocan al lado en bloque fila */
   justify-content: space-between; /* espacio en el medio de los elementos separados en bloques en cada esquina */
@@ -27,13 +27,13 @@
   border-radius: 5px;
 }
 
-/* Logos */
+  /* Logos */
 .logo {
   display: flex; /* los elementos al lado en bloque fila */
   align-items: center; /* los elementos centrados separados de los costados del contenedor */
 }
 
-/* Redes Sociales */
+  /* Redes Sociales */
 .icons-redsocial {
   padding: 6px 6px;
 }
@@ -57,7 +57,7 @@
   align-items: center; /* los elementos centrados separados de los costados del contenedor */
 }
 
-/* Botón Login */
+  /* Botón Login */
 .btn-login {
   margin: 0;
   padding: 0 6px;
@@ -99,7 +99,7 @@
   color: transparent;
 }
 
-/* Menu */
+  /* Menu */
 .menunav {
   display: flex; /* los elementos al lado en bloque fila */
   justify-content: center; /* los elementos en el centro separados de los costados del contenedor */
@@ -179,23 +179,23 @@
   color: #3DA35D; /* al selecionar con el puntero del mouse por arriba cambia el color del elemento selecionado al realizar el hover */
 }
 
-/* iconos de menu */
+  /* iconos de menu */
 .open-menu,
 .close-menu {
   display: none; /* que icono abrir y cerrar menu en desktop no se vean */
 }
 
 
-/* ========================RESPONSIVE===============================*/
+  /* ========================RESPONSIVE===============================*/
 
-/* Style: :::::Para Dispositivos MOBILES:::: con @media que se aplique desde 0 hasta 950 píxeles */
+  /* Style: :::::Para Dispositivos MOBILES:::: con @media que se aplique desde 0 hasta 950 píxeles */
 
 @media (max-width: 950px) {
   .topheader {
     position: none;
   }
 
-  /* Logos */
+    /* Logos */
   .logo {
     flex-direction: row; /* menu en columna */
     flex-wrap: wrap;
@@ -208,21 +208,21 @@
     max-width: 174px;
   }
 
- /* Check Día & Noche */
-  .container.py-2 {
+    /* Check Día & Noche */
+    /*.container.py-2 {
     padding: 0 6px;
-  }
+    }
 
-  .form-check-label {
+    .form-check-label {
     display: flex;
     flex-direction:row;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: center;
-  }
+    } */
 
-  /* Menu */
+    /* Menu */
   .menu {
     display: flex; /* los elementos al lado en bloque fila */
     flex-direction: column; /* menu en columna */
@@ -243,7 +243,7 @@
     font-size: 25px; /* tamaño text en el menu abierto */
   }
 
-  /* iconos de menu */
+    /* iconos de menu */
   .open-menu,
   .close-menu {
     display: block; /* que icono abrir y cerrar de menu en mobil, se vean */
@@ -256,24 +256,24 @@
     align-self: flex-end; /* alinear un elemento diferente del resto, en este caso al final */
   }
 
-  /* clase menu con un _modificador para cuando este abierto */
+    /* clase menu con un _modificador para cuando este abierto */
   .menu_opened {
     opacity: 1; /* la opacidad aparece */
     pointer-events: all; /* añade nuevamente todos los eventos del puntero para scroll */
   }
 
-  /* Eliminamos focusbordes de iconos open y close menu para el puntero, que quede focusborde en tecla tab */
+    /* Eliminamos focusbordes de iconos open y close menu para el puntero, que quede focusborde en tecla tab */
   .open-menu:focus:not(:focus-visible),
   .close-menu:focus:not(:focus-visible) {
     outline: none;
   }
 
-  /*  Para que en dipositivos mobil NO aparezca lineas por debajo de cada elemento en menu al pasar el puntero seleccionado) */
-  /*.menu a::after {
+    /*  Para que en dipositivos mobil NO aparezca lineas por debajo de cada elemento en menu al pasar el puntero seleccionado) */
+    /*.menu a::after {
     content: none; /* que no tenga un contenido en dispositivos mobil
-  }
+    }
 
-  /* al realizar el hover o seleccionamos el elemento */
+    /* al realizar el hover o seleccionamos el elemento */
   .menu a:hover,
   .menu a.selected {
   color: var(--secondary-color); /* al selecionar con el puntero del mouse por arriba cambia al color secundario el elemento */

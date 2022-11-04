@@ -1,13 +1,13 @@
-/* _______________________________________________________________________*/
-/* ================::::::::::COMPONENT educations ::::::::::==================*/
-/* :::::Para Dispositivos MOBILES:::: */
-/* section general de Experiencias */
+  /* _______________________________________________________________________*/
+  /* ================::::::::::COMPONENT educations ::::::::::==================*/
+  /* :::::Para Dispositivos MOBILES:::: */
+  /* section general de Experiencias */
 .educations {
   display: flex;
   flex-direction: column; /* para integrar las imagenes ola en columna*/
 }
 
-/* section del cuerpo de Educación */
+  /* section del cuerpo de Educación */
 .educations-body {
   max-width: 980px; /* que tenga un ancho máximo a 980px */
   margin: 0 auto; /* para centrar el margen de los elementos ya que fijamos en 10px dentro de los elementos skills-skill y por defecto lo alinea a la izquierda */
@@ -77,7 +77,7 @@
 }
 
 
-/* Imagen instituciones */
+  /* Imagen instituciones */
 .education-img-ministerio {
   width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
   /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
@@ -89,46 +89,6 @@
 }
 
 .education-img-inti {
-  width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
-  /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-}
-
-.education-img-bertoldi {
-  width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
-  /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-}
-
-.education-img-pivotpoint {
-  width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
-  /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-  /*padding-top: 10px; */
-}
-
-.education-img-cervantes {
-  width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
-  /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-}
-
-.education-img-unc {
-  width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
-  /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-  /*padding-top: 30px; */
-}
-
-.education-img-facultad {
-  width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
-  /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-  /*padding-top: 30px; */
-}
-
-.education-img-uncicons {
-  width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
-  /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-  /*padding-top: 40px;
-  padding-bottom: 20px; */
-}
-
-.education-img-secundaria {
   width: 0%;  /* foto de perfil que sea el 75% de mi viewport */
   /*max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
 }
@@ -175,10 +135,10 @@
   margin-top: 10px;
 }
 
-/* _______________________________________________________________________*/
-/* ==========================RESPONSIVE=============================*/
+  /* _______________________________________________________________________*/
+  /* ==========================RESPONSIVE=============================*/
 
-/* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+  /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media (min-width: 950px) {
 
   .educations-title {
@@ -242,46 +202,6 @@
 
   .education-img-inti {
     width: 70%;  /* foto de perfil que sea el 75% de mi viewport */
-    max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-  }
-
-  .education-img-bertoldi {
-    width: 70%;  /* foto de perfil que sea el 75% de mi viewport */
-    max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-  }
-
-  .education-img-pivotpoint {
-    width: 45%;  /* foto de perfil que sea el 75% de mi viewport */
-    max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-    padding-top: 10px;
-  }
-
-  .education-img-cervantes {
-    width: 150%;  /* foto de perfil que sea el 75% de mi viewport */
-    max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-  }
-
-  .education-img-unc {
-    width: 80%;  /* foto de perfil que sea el 75% de mi viewport */
-    max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-    padding-top: 30px;
-  }
-
-  .education-img-facultad {
-    width: 80%;  /* foto de perfil que sea el 75% de mi viewport */
-    max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-    padding-top: 40px;
-  }
-
-  .education-img-uncicons {
-    width: 55%;  /* foto de perfil que sea el 75% de mi viewport */
-    max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
-    padding-top: 40px;
-    padding-bottom: 20px;
-  }
-
-  .education-img-secundaria {
-    width: 60%;  /* foto de perfil que sea el 75% de mi viewport */
     max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
   }
 

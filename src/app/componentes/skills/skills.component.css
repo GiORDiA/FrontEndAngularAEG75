@@ -1,8 +1,8 @@
-/* circle */
+  /* circle */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
-/* _______________________________________________________________________*/
-/* ================::::::::::COMPONENT skills ::::::::::==================*/
-/* :::::Para Dispositivos MOBILES:::: */
+  /* _______________________________________________________________________*/
+  /* ================::::::::::COMPONENT skills ::::::::::==================*/
+  /* :::::Para Dispositivos MOBILES:::: */
 .skills {
   max-width: 980px; /* que tenga un ancho máximo a 980px */
   margin: 0 auto; /* para centrar el margen de los elementos ya que fijamos en 10px dentro de los elementos skills-skill y por defecto lo alinea a la izquierda */
@@ -10,8 +10,8 @@
   align-items: center;
 }
 
-/* _______________________________________________________________________*/
-/* Style: para dispositivos mobil que se aplica desde 0 hasta 950 píxeles */
+  /* _______________________________________________________________________*/
+  /* Style: para dispositivos mobil que se aplica desde 0 hasta 950 píxeles */
 .skills-title {
   font-size: 30px !important; /* tamaño de fuente */
   font-weight: bold; /* que este en negrita*/
@@ -116,7 +116,7 @@
   /*margin-top: -100px;*/
 }
 
-/* ::::: CIRCLE :::: */
+  /* ::::: CIRCLE :::: */
 
 .container {
   position: relative;
@@ -265,68 +265,6 @@
   color: rgba(255,255,25,0.75);
 }
 
-
-.skill-img-html {
-  max-width: 40%;
-  max-height: 40%;
- /*width: 60%;  /* foto de perfil que sea el 60% de mi viewport */
-}
-
-.skill-img-css {
-  max-width: 28%;
-  max-height: 28%;
-  /*width: 45%;  /* foto de perfil que sea el 50% de mi viewport */
-}
-
-.skill-img-js {
-  max-width: 62%;
-  max-height: 62%;
-  /*width: 100%;  /* foto de perfil que sea el 60% de mi viewport */
-}
-
-.skill-img-angular {
-  max-width: 80%;
-  max-height: 80%;
-  /*width: 100%;  /* foto de perfil que sea el 60% de mi viewport */
-}
-
-.skill-img-sql {
-  max-width: 80%;
-  max-height: 80%;
-  /*width: 100%;  /* foto de perfil que sea el 60% de mi viewport */
-}
-
-.skill-img-ruby {
-  max-width: 48%;
-  max-height: 48%;
-}
-
-.skill-img-git {
-  max-width: 35%;
-  max-height: 35%;
-}
-
-.skill-img-github {
-  max-width: 50%;
-  max-height: 50%;
-}
-
-.skill-img-flexboxgrid {
-  max-width: 65%;
-  max-height: 65%;
-  border-radius: 5%;
-}
-
-.skill-img-bootstrap {
-  max-width: 85%;
-  max-height: 85%;
-}
-
-.skill-img-figma {
-  max-width: 25%;
-  max-height: 25%;
-}
-
 .skill-img-ofimatica {
   max-width: 60%;
   max-height: 60%;
@@ -338,13 +276,13 @@
   border-radius: 5%;
 }
 
-/* _______________________________________________________________________*/
-/* ==========================RESPONSIVE=============================*/
+  /* _______________________________________________________________________*/
+  /* ==========================RESPONSIVE=============================*/
 
-/* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+  /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media(min-width: 950px) {
 
-  /* que esta Section Skills tenga */
+    /* que esta Section Skills tenga */
   .section-skills {
     padding: 19px;
     margin: 0;
@@ -357,13 +295,4 @@
     max-width: 980px; /* que tenga un ancho máximo a 980px */
   }
 
-  .skill-img-git {
-    max-width: 40%;
-    max-height: 40%;
-  }
-
-  .skill-img-github {
-    max-width: 52%;
-    max-height: 52%;
-  }
 }

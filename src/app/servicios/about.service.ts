@@ -7,7 +7,9 @@ import { About } from '../model/about';
   providedIn: 'root'
 })
 export class AboutService {
-  URL = 'http://localhost:8080/about/';
+  //URL = 'http://localhost:8080/about/';
+  URL = 'https://backendspringbootaeg75.herokuapp.com/about/';
+
 
   constructor(private httpClient : HttpClient) { }
 

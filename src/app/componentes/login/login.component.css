@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Para el Login - Register - RecoverPassword */
+  /* Para el Login - Register - RecoverPassword */
 .body {
   background-color: var(--bs-gray-500);
   color: var(--text-light-gray);

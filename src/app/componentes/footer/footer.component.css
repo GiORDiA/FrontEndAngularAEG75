@@ -1,7 +1,7 @@
-/* _______________________________________________________________________*/
-/* ================::::::::::COMPONENT footer ::::::::::==================*/
-/* :::::Para Dispositivos MOBILES:::: */
-/* Pie de Página Section */
+  /* _______________________________________________________________________*/
+  /* ================::::::::::COMPONENT footer ::::::::::==================*/
+  /* :::::Para Dispositivos MOBILES:::: */
+  /* Pie de Página Section */
 .footer {
   margin: 0;
   padding: 0;
@@ -79,10 +79,10 @@
   font-size: 15px;
 }
 
-/* _______________________________________________________________________*/
-/* ==========================RESPONSIVE=============================*/
+  /* _______________________________________________________________________*/
+  /* ==========================RESPONSIVE=============================*/
 
-/* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
+  /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media (min-width: 950px) {
 
   .pie-pagina .grupo-1 {
