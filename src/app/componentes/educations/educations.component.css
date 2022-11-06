@@ -129,12 +129,6 @@
   margin-top: 20px;
 }
 
-.education-description {
-  font-weight: 400;
-  font-size: 15px;
-  margin-top: 10px;
-}
-
   /* _______________________________________________________________________*/
   /* ==========================RESPONSIVE=============================*/
 
@@ -227,11 +221,6 @@
   .education-date {
     font-weight: bold;
     font-size: 20px;
-  }
-
-  .education-description {
-    font-size: 20px;
-    line-height: 1.3;
   }
 
   /* al rededor de cada experiencia*/
