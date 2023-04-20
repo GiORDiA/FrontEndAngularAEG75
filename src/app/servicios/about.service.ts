@@ -8,8 +8,8 @@ import { About } from '../model/about';
 })
 export class AboutService {
   //URL = 'http://localhost:8080/about/';
-  URL = 'https://backendspringbootaeg75.herokuapp.com/about/';
-
+  //URL = 'https://backendspringbootaeg75.herokuapp.com/about/';
+  URL = 'https://backendspringbootaeg75.onrender.com/about/';
 
   constructor(private httpClient : HttpClient) { }
 

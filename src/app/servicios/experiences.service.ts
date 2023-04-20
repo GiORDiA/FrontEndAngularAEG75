@@ -8,7 +8,8 @@ import { Experiences } from '../model/experiences';
 })
 export class ExperiencesService {
   // expURL = 'http://localhost:8080/explab/';
-  expURL = 'https://backendspringbootaeg75.herokuapp.com/explab/';
+  //expURL = 'https://backendspringbootaeg75.herokuapp.com/explab/';
+  expURL = 'https://backendspringbootaeg75.onrender.com/explab/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -10,7 +10,8 @@ import { persona } from '../model/persona.model';
 export class PersonaService {
   /*Enotrno local */
   // URL = 'http://localhost:8080/personas/';
-  URL = 'https://backendspringbootaeg75.herokuapp.com/personas/';
+  //URL = 'https://backendspringbootaeg75.herokuapp.com/personas/';
+  URL = 'https://backendspringbootaeg75.onrender.com/personas/';
 
   constructor(private http: HttpClient) { }
 

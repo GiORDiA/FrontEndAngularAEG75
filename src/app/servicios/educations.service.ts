@@ -8,7 +8,8 @@ import { Educations } from '../model/educations';
 })
 export class EducationsService {
   // URL = 'http://localhost:8080/educacion/';
-  URL = 'https://backendspringbootaeg75.herokuapp.com/educacion/';
+  //URL = 'https://backendspringbootaeg75.herokuapp.com/educacion/';
+  URL = 'https://backendspringbootaeg75.onrender.com/educacion/';
 
   constructor(private httpClient : HttpClient) { }
 

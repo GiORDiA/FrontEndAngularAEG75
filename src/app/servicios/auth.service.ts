@@ -9,8 +9,9 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-   //authURL = 'http://localhost:8080/auth/';
-  authURL = 'https://backendspringbootaeg75.herokuapp.com/auth/';
+  //authURL = 'http://localhost:8080/auth/';
+  //authURL = 'https://backendspringbootaeg75.herokuapp.com/auth/';
+  authURL = 'https://backendspringbootaeg75.onrender.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
